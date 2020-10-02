@@ -9,6 +9,18 @@
     <!-- FUCK -->
     <header>
     <h1>Jesus Fucking Christ</h1>
+ 
+    <nav>
+        <ul>
+            <li><a href="index.html">Main page swag</a> </li>
+            <li><a href="contact.html">Contact swag</a> </li>
+        </ul>
+    </nav>
+    </header>
+    <!-- Starting main -->
+    <main>
+        <h2>Run ya numba shortie</h2>
+    </main>
     <table>
         <caption>Hours of Operation</caption>
         <thead>
@@ -32,17 +44,37 @@
             </tr>
         </tbody>
     </table>
-    <nav>
-        <ul>
-            <li><a href="index.html">Main page swag</a> </li>
-            <li><a href="contact.html">Contact swag</a> </li>
-        </ul>
-    </nav>
-    </header>
-    <!-- Starting main -->
-    <main>
-        <h2>Run ya numba shortie</h2>
-    </main>
+    <section>
+        <h3>We love to hear from you</h3>
+        <form action="thanks.html" methods="get">
+            <div>
+                <label for="fullname">Your Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="First & Last Name" >
+            </div>
+            <div>
+                <label for="youremail">Email</label>
+                <input type="email" id="youremail" name="youremail">
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div>
+                <label for="tickets">How many tickets? (sold in pairs)</label>
+                <input type="number" id="tickets" name="tickets" min="2" max="10" step="2">
+            </div>
+            <div>
+                <label for="row"> Select Row</label>
+                <select id="row" name="row">
+                    <option value="front">Front</option>
+                    <option value="center">Center</option>
+                    <option value="back">Back</option>
+                </select>
+            </div>
+            <button type="Submit">Sign me up!</button>
+
+        </form>
+    </section>
     <!-- website footer -->
     <footer>  
         yeah bitch &copy; deez nuts
