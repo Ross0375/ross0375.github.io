@@ -1,0 +1,98 @@
+body {
+    color:darkslategrey;
+    font-family: Inter;
+}
+/* selecting multiple elements */
+h1,h2,h3,h4,h5,h6 {
+    color: white;
+    font-family: ITC fenice std;
+    background-color: darkslategrey;
+}
+/* selecting child elements */
+nav ul{
+    list-style: none;
+}
+nav ul a {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+/* class name selectors */
+.orange-link {
+    background: darkslategrey;
+    color: orange;
+    text-decoration: none;
+}
+
+/* selecting with id value */
+#hobbies {
+    background-color: orange;
+}
+
+.large-text {
+    font-size: 20px;
+}
+
+article>p {
+    font-size: 20px;
+}
+
+/* adjacent sibling selector */
+
+h3+dl{
+    /* thickness style color */
+    border: 1px solid black;
+}
+
+[alt="Picture of Adison Rossiter"] {
+    border: 30px solid white
+}
+
+/* using pseudo classes
+styling navigation
+*/
+nav ul,
+nav ul a,
+nav ul:visited{
+    background:orange;
+    box-shadow: -2px 2px 4px 2px black;
+
+}
+
+nav ul a:hover,
+nav ul a:focus {
+    text-decoration: underline;
+}
+
+nav ul a:active {
+    box-shadow: 0 0 4px 2px black;
+}
+/* position related selectors */
+/* first child selector */
+section dl dt:first-child{
+    font-weight:bold
+}
+
+section dl dd:last-child{
+    font-weight:bolder
+}
+
+footer {
+    background-color: aqua;
+}
+
+body footer {
+    background: orange
+}
+
+footer{
+    background-color: red;
+}
+
+.site-footer {
+    background-color: cornflowerblue;
+}
+
+footer.site-footer {
+    background-color: teal;
+}
