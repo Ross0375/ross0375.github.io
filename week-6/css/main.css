@@ -1,3 +1,4 @@
+
 /* Changing font size and font */
 body {
     font-family: 'Roboto Mono', monospace;
@@ -45,3 +46,16 @@ nav ul a:hover {
     color: #611C35;
 }
 
+
+
+
+/* WEEK 6 STARTS */
+article>p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+body {
+    background-image: url("../images/white_brick_wall.png") ;
+
+}
