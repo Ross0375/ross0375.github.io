@@ -1,0 +1,77 @@
+
+/* Changing font size and font */
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+/* header and footer color */
+header,footer {
+    background-color: #FFA630;
+}
+/* Title color */
+.site-title {
+    color: #2E5077;
+}
+/* adding shadow */
+#my-image {
+    box-shadow: 0px 0px 2px 1px black;
+}
+/* hobby list background, doesn't look like it worked but it did, adding unordered list to show it works */
+dl dt,dd:nth-child(odd) {
+    background-color: #4DA1A9;
+}
+
+/* unordered list */
+aside ul li:nth-child(odd) {
+    background-color: #4DA1A9;
+}
+
+aside ul {
+    list-style: square;
+}
+
+nav ul a{
+    text-decoration: none;
+    background-color: #611C35;
+    color: #D7E8BA;
+    border: 1px solid #2E5077 ; 
+}
+/* couldn't get this to work when put in the same selection as nav ul a */
+nav ul {
+    list-style: none;
+}
+
+nav ul a:hover {
+    background-color: #D7E8BA;
+    color: #611C35;
+}
+
+
+
+
+/* WEEK 6 STARTS */
+article p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+body {
+    background-image: url("../images/white_brick_wall.png") ;
+    border: 4px solid black
+}
+
+/* CSS box model */
+article p {
+    width: 50%; 
+    padding: 1em ;
+    margin: 2em ;
+}
+
+body {
+    width: 70%;
+    margin: 0px auto;
+}
+
+
+
+
