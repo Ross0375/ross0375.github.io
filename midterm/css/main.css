@@ -1,22 +1,24 @@
 nav ul li{
     text-align: center;
-    text-decoration-style: none;
-    background-color: rgb(106, 155, 204) ;
+    font-size: 1.5em;
     width: calc(100%/3);
-    height: 2em;
+    height: 2rem;
     display: inline-block;
     border-right: 1px solid black ;
 }
 
 nav ul li:last-child{
     border: none;
+}
 
-
+ul li {
+    margin-right: -4px;
 }
 
 article img{
-    width: 20%;
+    width: 25%;
     float: left;
+    margin: .75em;
 }
 
 
@@ -25,13 +27,10 @@ a {
     text-decoration: inherit;
 }
 
-ul li {
-    margin-right: -4px;
-}
-
 #story {
     box-sizing: border-box;
-    border: 1px solid black;
+    margin: .8em;
+
 }
 
 section div {
@@ -47,21 +46,19 @@ img{
     position: relative;
     text-align: center;
     color: white;
-
 }
 
 .centered{
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .container{
     max-width: 800px;
     margin: 0px  auto ;
-    background-color: white;
+    background-color: #e3fffd;
     position: relative;
 }
 
@@ -74,4 +71,38 @@ body {
 
 h1{
     font-size: 3em;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+h3{
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+h4{
+    font-size: 1.1em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+article p{
+    line-height: 1.4em;
+    font-size: .9em;
+}
+
+#facts{
+    line-height: 1.4em;
+    font-size: .9em;
+    box-sizing: border-box;
+    margin: .8em;
+}
+
+#contact{
+    box-sizing: border-box;
+    margin: .8em;
 }
