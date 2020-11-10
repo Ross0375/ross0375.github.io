@@ -141,22 +141,31 @@ p{
 	display: none;
 }
 
-.mobile-nav ul li {
-    text-align: center;
-    font-size: 1.5em;
-    width: 33%;
-	height: 2rem;
+.mobile-nav {
+	list-style-type: none;
+	text-align: center; 
+	padding: 0;
+	margin: 0;
+	padding-bottom: 2em;
+  }
+  
+  .mobile-nav li {
 	display: inline-block;
-}
+	font-size: 2em;
+	padding: 20px;
+  }
 
 .head{
 	width: 25%;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 1em;
 }
 
-
+.mobile-head{
+	border-bottom: 1px solid black;
+}
 
 /* ------------------------------------------------------
 					Desktop Styles
