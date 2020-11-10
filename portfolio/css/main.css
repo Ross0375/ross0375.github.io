@@ -125,11 +125,21 @@ p{
 	max-width: 1200px;
 	margin: 0 auto;
     padding: 1em;
-    width:1200px;
+	position: relative;
+	margin-bottom: 1em;
 }
 
+.art,
+.artbig{
+	width: calc(100%/3);
+	float: left;
+	position: relative;
+	padding: .3em;
+}
 
-
+.artbig{
+	width: calc(100%/3*2);
+}
 
 
 
@@ -144,7 +154,11 @@ p{
     html {
 		font-size: 16px;
     }
-    
+	
+	.nav{
+		display: none;
+	}
+	
     .side-nav {
         height: 100%; /* Full-height: remove this if you want "auto" height */
         width: 180px; /* Set the width of the sidebar */
@@ -161,8 +175,5 @@ p{
         width: 150px;
     }
 
-    .art{
-        width: 500px;
 
-    }
 }
