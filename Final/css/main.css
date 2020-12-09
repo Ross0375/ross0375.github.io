@@ -94,6 +94,7 @@ h1,h2,h3,h4{
 /* CONTAINER BOUNDS */
 
 .container {
+    margin: 0 auto;
     padding: 1rem;
     max-width:1200px;
 }
@@ -103,19 +104,31 @@ h1,h2,h3,h4{
 a.button-1,
 a.button-2,
 a.button-3{
-    padding: 1.5rem;
+    padding: 1.7rem;
+    display:inline-block;
+    font-size: 1.4rem;
+}
+
+a.button-1 {
+    background-color: #c78c06;
+    color: #222;
 }
 
 a.button-2{
-    font-size: 1.25rem;
     color: white;
     background-color: #222222;
+}
+
+a.button-3{
+    background-color: rgba(34, 34, 34, 0.75);
+    border: 1px solid #c78c06 ;
 }
 /*---------------- WELCOME ----------------------*/
 
 section.welcome {
     height: 500px;
     background: grey url("../images/main-banner.jpg") no-repeat center bottom;
+    background-size: cover;
 }
 
 .welcome .background {
@@ -183,8 +196,23 @@ section.welcome {
 .our-vision {
     background: grey url("../images/vision.jpg") no-repeat center;
     color: white;
+    background-size: cover;
 }
 
 .our-vision h4 {
     margin-bottom: 1rem;
+}
+
+/* ------------------- OUR TEAM ------------------------------- */
+
+.our-team{
+    display: flex;
+    flex-direction: column;
+}
+
+.john-doe,
+.bob-rite{
+    margin-top: -1rem;
+    padding: 1rem;
+    background-color: #FFE6AC ;
 }
