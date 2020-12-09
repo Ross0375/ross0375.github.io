@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+                                Custom Styles
+----------------------------------------------------------------------------- */
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	line-height: 1.5;
+}
+
+img{
+	width: 100%;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* HEADING ZONE */
+
+h1{
+    font-size: 5.063rem;
+}
+
+h2{
+	font-size: 3.375rem;
+}
+
+h3{
+	font-size: 2.25rem;
+}
+h4{
+	font-size: 1.5rem;
+}
+
+h1,h2,h3,h4{
+    font-weight: 600;
+}
+
+/* CONTAINER BOUNDS */
+
+.container {
+    padding: 1rem;
+    max-width:1200px;
+}
+
+/* ---------------------- BUTTON ZONE --------------------- */
+
+a.button-1,
+a.button-2,
+a.button-3{
+    padding: 1.5rem;
+}
+
+a.button-2{
+    font-size: 1.25rem;
+    color: white;
+    background-color: #222222;
+}
+/*---------------- WELCOME ----------------------*/
+
+section.welcome {
+    height: 500px;
+    background: grey url("../images/main-banner.jpg") no-repeat center bottom;
+}
+
+.welcome .background {
+    background-color: rgba(34, 34, 34, 0.6);
+}
+
+.welcome .container p, .welcome .container h1 {
+    color: white;
+}
+
+/* ABOUT US */
+
+.about-us {
+    background-color: #FFE6AC ;
+}
+
+/* --------------- OUR SERVICES ---------------------- */
+
+.our-services {
+    grid-template-areas: 
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+    ;
+    display:grid ;
+    gap: 1rem;
+}
+
+.our-services h3, 
+.our-services p, 
+.our-services a  {
+    margin: 1rem;
+}
+
+
+.digital-transformation{
+    background-color: #FFE6AC ;
+    grid-area: a1;
+}
+
+.marketing{
+    background-color: #FFE6AC ;
+    grid-area: a2;
+}
+
+.video-production{
+    background-color: #FFE6AC ;
+    grid-area: a3;
+}
+
+.web-development{
+    background-color: #FFE6AC ;
+    grid-area: a4;
+}
+
+.print{
+    background-color: #FFE6AC ;
+    grid-area: a5;
+}
+
+/* --------------------- OUR VISION --------------------------- */
+
+.our-vision {
+    background: grey url("../images/vision.jpg") no-repeat center;
+    color: white;
+}
+
+.our-vision h4 {
+    margin-bottom: 1rem;
+}
