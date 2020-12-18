@@ -13,27 +13,32 @@
     <div class="wrapper">
         <!---------------------------------------------------------------------------------------------------- Header------------------------------ -->
         <header class="site-header">
+            <div class="container">
                 <img src="images/logo.png" alt="Three Star Media Logo">
-            <div class="top-nav, container">
+            <div>
                 <!-------------------------------- NAV ------------------------------>
                 <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="#" class="current">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><input type="text" placeholder="Search"> <button><i class="im im-magnifier"></i></button></li>
-                    </ul>
+                    <div class="topnav container">
+                        <a href="#" class="current">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Services</a>
+                        <a href="#">Team</a>
+                        <a href="#">Contact</a>
+                        <div class="search-container">
+                            <input class="search" type="text" placeholder="Search"> 
+                            <button class="submit"><i class="im im-magnifier"></i></button>
+                        </div>
+                    </div>
                 </nav>
             </div>
+        </div>
         </header>
         <!----------------------------------------------------------------------- Main Content -------------------------------------------------------->
         <main class="content">
             <!------------------------- Welcome Section ------------------------>
-            <section class="welcome">
+            <section class="welcome-zone">
                 <div class="background">
-                    <div class="container">
+                    <div class="welcome container">
                         <h1>Welcome to Three Star Media</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora in aliquid commodi quas, mollitia quidem eligendi! Aspernatur impedit, illum repudiandae       inventore error exercitationem pariatur ipsa et neque similique molestiae. Aliquam!</p>
                         <a class="button-1" href="#">Connect with us  <i class="im im-care-right"></i></a>
@@ -87,10 +92,12 @@
                     </div>
             </section>
             <!----------------------------------------- Our Vision ------------------------------------------------>
-            <section class="our-vision container">
-                <h4>Our Vision</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia illum vitae neque unde deserunt molestias laboriosam sapiente tempore. Debitis amet illo autem recusandae voluptas omnis voluptate laborum asperiores repudiandae consequatur!</p>
-                <a class="button-3" href="#">Learn More <i class="im im-care-right"></i></a>
+            <section class="our-vision ">
+                <div class="container">
+                    <h4>Our Vision</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia illum vitae neque unde deserunt molestias laboriosam sapiente tempore. Debitis amet illo autem recusandae voluptas omnis voluptate laborum asperiores repudiandae consequatur!</p>
+                    <a class="button-3" href="#">Learn More <i class="im im-care-right"></i></a>
+                </div>
             </section>
             <!----------------------------------------- Our Team ----------------------------------------------------->
             <section class="container">
@@ -102,6 +109,7 @@
                     <div class="john-doe">
                         <h3>John Doe</h3>
                         <h5>CEO and Co-owner</h5>
+                        <hr class="line">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem adipisci quisquam soluta quas sequi enim eius rem ea quod libero blanditiis, mollitia pariatur necessitatibus dolor nostrum iusto, facere omnis ex.</p>
                     </div>
                     <div class="bob-rite-img">
@@ -110,6 +118,7 @@
                     <div class="bob-rite">
                         <h3>Bob Rite</h3>
                         <h5>CFO and Co-owner</h5>
+                        <hr class="line">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet consequatur dignissimos reprehenderit repellat! Neque odit provident ab nihil suscipit delectus exercitationem deleniti tempora, accusantium dicta. Error temporibus minus iste?</p>
                     </div>
                 </div>
@@ -129,9 +138,9 @@
                     </fieldset>
                     <fieldset>
                         <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" type="text" required></textarea>
                     </fieldset>
-                    <input class="send" type="submit" value="Send">
+                    <input class="submit" type="submit" value="Send">
                 </form>
             </section>
             <!----------------------------------------- Hours of Operation ------------------------------------------------->
@@ -159,9 +168,10 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11216.156593565902!2d-75.7569228!3d45.348022!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc6cc467725843e2b!2sAlgonquin%20College%20%E2%80%93%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1607029991130!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </section>
         </main>
-        <footer class="container">
-            <p>&copy; Copyright Three Star Media, 2020</p>
-            <p>All images are taken from <a href="https://unsplash.com/">Unsplash</a></p>
+        <!----------------------------------- FOOTER ------------------------------->
+        <footer>
+            <p class="container">&copy; Copyright Three Star Media, 2020</p>
+            <p class="container">All images are taken from <a href="https://unsplash.com/">Unsplash</a> <p>
         </footer>
     </div>
     
