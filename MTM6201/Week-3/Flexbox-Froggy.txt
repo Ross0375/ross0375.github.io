@@ -31,6 +31,7 @@ flex-direction: column;
 22) align-content: flex-end;
 23) flex-direction: column-reverse;
 align-content: center;
-24) flex-flow: column-reverse wrap-reverse;
+24) flex-direction: column-reverse;
+flex-wrap: wrap-reverse;
 justify-content: center ;
 align-content: space-between;
