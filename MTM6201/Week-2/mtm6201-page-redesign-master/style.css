@@ -1,0 +1,199 @@
+/* No container property so I used main to set everything */
+main#main {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+/* Getting rid of gap and cRaZy font */
+body{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* General font size Styling */
+h1 {
+    font-size: 2.25em;
+}
+
+h2 {
+    font-size: 1.5em
+}
+
+p {
+    font-size: 1em;
+}
+
+/* I have to manually enter font size in each section because of specificity >:/ */
+
+/* Nav Styling fitting everything in a column and fixing colors */
+
+#nav.nav {
+    display: flex;
+    flex-flow: column;
+    width: auto;
+    margin: 0px auto;
+    background-color: #575757;
+    border: none;
+  }
+/* Nav Link Styling, including hover animation */
+.nav-link,
+.nav-link:visited {
+    color:white;
+    transition-duration: 0.5s; /* For animation */
+    font-weight: normal;
+    padding: 5px 12px;
+}
+  
+/* Hover Style */
+.nav-link:hover {
+    background: grey ;
+    border-radius: 1em;
+}
+
+/* Home Styling */
+/* font fix, spacing it out */
+section.home#home {
+    margin: 40% auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em ;
+    text-align:justify;
+    background-color: white;
+    font-size: 1em;
+}
+
+/* about styling, fixing colors and font size */
+.about#about {
+    background-color: #575757;
+    color: white;
+    padding: 1em ;
+    font-size: 1em;
+    text-align: justify;
+}
+/* changing image size */
+img.about-image{
+    width: 200px;
+}
+
+/* CONTACT ME */
+
+.contact#contact{
+    padding: 5em;
+    padding-top: 1em;
+    background-color: white;
+    align-content: center;
+    text-align: justify;
+    display: flex; /*will be used for desktop style */
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* Fixing contact section */
+form.contact-form {
+    background-color: #575757;
+    width: 100%;
+    padding: 2em;
+    padding-right: 3em;
+    align-content: space-between;
+    color: white;
+}
+
+/* Form input sizing fix */
+
+div.contact-form-input {
+    width: auto;
+    margin-right: 1em;
+}
+
+/* Getting rid of the textarea resize */
+
+textarea {
+    resize: none;
+    width: auto;
+}
+
+/* submit button styling, same as nav styling */
+button {
+    padding: 5px 12px;
+    border: none;
+    color: white;
+    background: none;
+    border-radius: 1em;
+    transition-duration: 0.5s; /* For animation */
+}
+
+button:hover {
+    background: grey ;
+}
+
+
+/* FOOTER ZONE */
+
+footer {
+    background-color: #575757;
+    padding: 1em;
+    color: white;
+}
+
+
+/* ----------------------------DESKTOP STYLES--------------------------------- */
+@media screen and (min-width: 680px){
+    
+    /* Nav changing directions */
+    .nav#nav {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
+
+    /* Spacing */
+    section.home#home {
+        padding: 0px 10em ;
+        margin: 40% auto;
+    }
+
+    /* Centering and changing image size */
+    
+    img.about-image{
+        display: block;
+        width: 400px;
+        float:none;
+        margin: 0px auto;
+    }
+
+
+    /* Contact me section changing */
+    section.contact#contact{
+        width: 60%;
+        margin: 0px auto;
+        flex-direction: row;
+        align-content: flex-start;
+    }
+
+    /* Getting the contact me section in order */
+
+    h2.section-title {
+        flex-basis: 1200px;
+    }
+
+    .contact p {
+        flex: 1 ;
+        padding-right: 1em;
+    }
+
+    form.contact-form{
+        flex: 1;
+    }
+}
+
+/* different spacing for a larger desktop style */
+@media screen and (min-width: 1000px){
+
+    /* Spacing */
+    section.home#home {
+        padding: 0px 20em ;
+        margin: 30% auto;
+    }
+}
