@@ -124,6 +124,7 @@ input:focus{
     outline: none;
 }
 
+/* aligning the I agree to the checkbox */
 div.agree-area {
 	display: flex;
 	align-content: center;
@@ -138,6 +139,8 @@ input#agree {
 	height: 25px;
 	border-radius: 50%;
 }
+
+/* making the submit button look like documentation */
 
 input#submit {
 	width: 250px;
