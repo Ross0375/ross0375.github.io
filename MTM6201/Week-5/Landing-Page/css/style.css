@@ -59,6 +59,9 @@ table {
     padding: 0px 70px 0px 70px;
 }
 
+body {
+	background-color: #F7F7FF;
+}
 
 /* ----------------------------------HEADING/FONT SIZING---------------------- */
 .logo img {
@@ -81,21 +84,47 @@ h2 {
 }
 
 h3 {
+	font-size: 24px;
+	line-height: 29px;
+}
+
+h4 {
 	font-size: 16px;
 }
 
+h5 {
+	font-size: 18px;
+	font-weight: bold;
+}
 
+p {
+	font-size:16px;
+}
+
+/* -----------------------img spacing--------------------------- */
+
+#bike {
+	margin: 5px 0 15px 0;
+}
 
 /* -------------------------- BOX AROUND CALL TO ACTION--------------------- */
 
 #call-to-action {
-	width: 270px;
-	padding: 15px 25px 15px 25px;
-	box-shadow: 5px 10px 10px;
+	width: 100%;
+	padding: 15px 25px 24px 25px;
+	box-shadow: 5px 10px 15px ;
 	display:flex;
 	flex-direction: column;
 	flex-wrap:wrap;
 	border-radius: 26px;
+	margin: 0 auto 45px ;
+	margin-left:-10px;
+}
+
+/* hiding extra text from desktop styling */
+
+#desktop {
+	display: none;
 }
 
 /* Call to action spacing/styling */
@@ -104,7 +133,7 @@ h3 {
 #last-name,
 #email,
 #phone-number {
-	width: 250px;
+	width: 100%;
 	height: 40px;
 	margin-bottom: 15px;
 	border-radius: 11px;
@@ -113,10 +142,11 @@ h3 {
 	font-style: #9B9B9B;
 }
 
+
 /* supplemental spacing to get it inline with supplied documentation */
 
 #call-to-action h2,
-#call-to-action h3 {
+#call-to-action h4 {
 	margin-bottom: 10px;
 }
 
@@ -128,6 +158,7 @@ input:focus{
 div.agree-area {
 	display: flex;
 	align-content: center;
+	margin-bottom:15px;
 }
 
 .agree {
@@ -138,23 +169,37 @@ input#agree {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
+	margin-right: 10px;
 }
 
 /* making the submit button look like documentation */
 
-input#submit {
-	width: 250px;
+input#send {
+	width: 100%;
 	height: 40px;
 	font-size: 24px;
 	font-weight: bold;
 	background-color: #57EEAB;
 	border-radius: 11px;
 	border:none;
+	margin-bottom:15px;
+	padding-left: 10px;
 }
 
-input#submit:hover{
+input#send:hover{
 	background-color: #50df9e ;
 	transition-duration: 0.2s;
+}
+
+a,
+a:visited {
+	color: #FF8480;
+	text-decoration: none;
+	line-height: 18px;
+}
+
+a:hover {
+	color: #ff5852;	
 }
 
 
@@ -162,4 +207,63 @@ input#submit:hover{
 
 footer {
 	padding-top: 45px;
+	background-color: #FFFD8C ;
+}
+
+#hours,
+#city {
+	height: 40px;
+	margin-bottom: 15px;
+	border-radius: 11px;
+	border: 0px solid;
+	background-color: #F4F4F5;
+	font-style: #9B9B9B;
+}
+
+/* removing selector for numbers in chrome, safari, edge, opera*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*removing for firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#estimate-placement {
+	display:flex;
+	flex-flow: row wrap;
+}
+
+#hours {
+	min-width: 20px; /* THIS TAG IS VERY IMPORTANT AND TOOK ME AN HOUR TO FIGURE OUT WHY FLEX GROW WASN'T WORKING, APPARANTLY NUMBERS INPUT HAS A MIN-WIDTH, DO NOT REMOVE */
+	flex: 1;
+	padding-left: 10px;
+}
+
+#city {
+	flex: 4;
+	padding-left: 10px;
+}
+
+#calculate {
+	flex: 1 100%;
+	height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: #FF8480;
+	border-radius: 11px;
+	border:none;
+	margin-bottom:15px;
+	color: #F7F7FF;
+}
+
+/* social media icons */
+
+#social-media {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 15px;
 }
