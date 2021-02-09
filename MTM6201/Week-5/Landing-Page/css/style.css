@@ -101,23 +101,26 @@ p {
 	font-size:16px;
 }
 
+input {
+	font-size: 16px;
+}
+
 /* -----------------------img spacing--------------------------- */
 
 #bike {
 	margin: 5px 0 15px 0;
 }
 
-/* -------------------------- BOX AROUND CALL TO ACTION--------------------- */
+/* -------------------------- CALL TO ACTION --------------------- */
 
 #call-to-action {
-	width: 100%;
 	padding: 15px 25px 24px 25px;
 	box-shadow: 5px 10px 15px ;
 	display:flex;
 	flex-direction: column;
 	flex-wrap:wrap;
 	border-radius: 26px;
-	margin: 0 auto 45px ;
+	margin: auto auto 45px ;
 	margin-left:-10px;
 }
 
@@ -210,6 +213,10 @@ footer {
 	background-color: #FFFD8C ;
 }
 
+h5, p {
+	margin-bottom: 15px;
+}
+
 #hours,
 #city {
 	height: 40px;
@@ -238,7 +245,7 @@ input[type=number] {
 }
 
 #hours {
-	min-width: 20px; /* THIS TAG IS VERY IMPORTANT AND TOOK ME AN HOUR TO FIGURE OUT WHY FLEX GROW WASN'T WORKING, APPARANTLY NUMBERS INPUT HAS A MIN-WIDTH, DO NOT REMOVE */
+	min-width: 20px; /* THIS TAG IS VERY IMPORTANT AND TOOK ME AN HOUR TO FIGURE OUT WHY FLEX GROW WASN'T WORKING, APPARENTLY NUMBERS INPUT HAS A MIN-WIDTH, DO NOT REMOVE */
 	flex: 1;
 	padding-left: 10px;
 }
@@ -246,6 +253,7 @@ input[type=number] {
 #city {
 	flex: 4;
 	padding-left: 10px;
+	margin-left: 10px;
 }
 
 #calculate {
@@ -260,10 +268,70 @@ input[type=number] {
 	color: #F7F7FF;
 }
 
+input#calculate:hover{
+	background-color: #ff5852 ;
+	transition-duration: 0.2s;
+}
+
 /* social media icons */
 
 #social-media {
 	display: flex;
 	justify-content: space-around;
 	padding-bottom: 15px;
+	max-width: 375px ;
+	margin: 0 auto;
+}
+
+
+
+
+/*------------------------------------------------------------------------------- 										TABLET STYLING
+--------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+	
+	/* HEADINGS/FONT */
+
+	h1 {
+		font-size: 80px;
+	}
+	
+	h4 {
+		font-size: 30px;
+	}
+
+	/* img zone */
+
+	#bike {
+		max-width: 420px;
+		margin: 0 auto 30px;
+	}
+
+	/* font sizing cont. and button spacing */
+	input {
+		font-size: 16px;
+	}
+
+	input#send {
+		font-size: 32px;
+		padding: 12px auto ;
+	}
+
+	/* ------------------------ footer------------------------------ */
+
+	#hours {
+		flex-grow: 2
+	}
+
+	#city {
+		flex-grow: 5;
+	}
+
+	#calculate {
+		flex: 2 auto;
+		margin-left: 10px;
+	}
+
+	/* side note figuring this out was way easier then the last footer */
 }
