@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Dash</title>
 </head>
 <body >
@@ -16,12 +20,12 @@
 
     <!-- ------------------------------------MAIN------------------------------------------------- -->
     <main class="container">
-        <div id="landing-text">
+        <section id="landing-text">
             <h1>Want to be your own boss?</h1>
             <p>Start today and make up to 30$/hr driving your own vehicle with Dash!</p>
-        </div>
+        </section>
 
-        <div id="call-to-action">
+        <section id="call-to-action">
             <h2>Apply Now</h2>
             <h3>Enter your info below to get started</h3>
             <form action="#" method="post">
@@ -34,18 +38,21 @@
                     <input id="email" placeholder="Email address" type="email" required>
                     
                     <input id="phone-number" placeholder="Phone number" type="tel" required></input>
+                    
+                    <div class="agree-area">
+                        <input type="checkbox" id="agree" class="agree" name="agree">
+                        <label for="agree" class="agree"> I agree to dash terms</label>
+                    </div>
 
-                    <input type="checkbox" id="agree" name="agree">
-                    <label for="agree"> I agree to dash terms</label>
-
-                    <input class="submit" type="submit" value="DRIVE WITH US">
+                    <input id="submit" type="submit" value="DRIVE WITH US">
                 </fieldset>
             </form>
-        </div>
+            <p id="already-applied">Already applied? <a href="#">Check your application status here</a></p>
+        </section>
     </main>
     <!-- -------------------------------FOOTER----------------------------------------- -->
     <footer>
-        <div class="footer container">
+        <div class="container">
             <div id="estimate">
                 <h4>See how much you can earn with Dash.</h4>
                 <p>how many hours do you want to drive with us this week?</p>
