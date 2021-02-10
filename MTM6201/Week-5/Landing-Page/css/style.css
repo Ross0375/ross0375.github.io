@@ -57,6 +57,7 @@ table {
 .container {
     margin: 0 auto;
     padding: 0px 70px 0px 70px;
+
 }
 
 body {
@@ -122,6 +123,7 @@ input {
 	border-radius: 26px;
 	margin: auto auto 45px ;
 	margin-left:-10px;
+	background-color: #FFFFFF;
 }
 
 /* hiding extra text from desktop styling */
@@ -334,4 +336,62 @@ input#calculate:hover{
 	}
 
 	/* side note figuring this out was way easier then the last footer */
+}
+
+/*------------------------------------------------------------------------------- 										DESKTOP STYLING
+--------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1100px) {
+
+	.logo {
+		padding-bottom: 110px;
+	}
+
+	.container{
+		padding: 0 140px;
+	}
+
+	main.container {
+		display: flex;
+	}
+
+
+	#landing-text,
+	#call-to-action {
+		width: 536px;
+	}
+
+	#bike {
+		width: 0px;
+		padding:0 20%;
+	}
+
+	main {
+		background-image: url(../images/bg-image/scooter.svg);
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: 650px;
+	}
+	
+	
+	
+	
+	
+	
+	#mobile {
+		display: none;
+	}
+
+	#desktop {
+		display: inline;
+	}
+
+	
+
+	
+
+
+	#estimate {
+		max-width: 615px;
+	}
 }
