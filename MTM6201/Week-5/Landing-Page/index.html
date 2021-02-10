@@ -22,9 +22,11 @@
     <main class="container">
         <section id="landing-text">
             <h1>Want to be your own boss?</h1>
+            <!-- h3 tag used here because multiple other texts were smaller, easier to differentiate then paragraphs with classes and what not -->
             <h3>Start today and make up to 30$/hr driving your own vehicle with Dash!</h3>
         </section>
 
+        <!-- bike is in its own section to be used in flexboxes (or in this case used as a spacer) -->
         <section id="bike">
             <img src="images/bg-image/scooter.svg" alt="scooter illustration">
         </section>
@@ -63,13 +65,16 @@
                 <p>how many hours do you want to drive with us this week?</p>
 
                 <form action="#" method="post">
-                    <fieldset id="estimate-placement">
+                    <!-- estimate placement tag used for flexbox seperately from the whole footer -->
+                    <fieldset id="estimate-placement"> 
                         <input type="number" id="hours" placeholder="hours">
                         <input type="text" placeholder="city" id="city">
                         <input id="calculate" type="submit" value="CALCULATE">
                     </fieldset>
                 </form>
             </div>
+
+            <!-- social media flex used to differentiate from social media due to issues with flex and grid -->
             <div id="social-media-flex">
                 <div id="social-media">
                     <img src="images/icons/instagram.svg" alt="instagram" class="icon">
