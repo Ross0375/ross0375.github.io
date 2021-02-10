@@ -258,6 +258,7 @@ input[type=number] {
 	margin-left: 10px;
 }
 
+/* button styling */
 #calculate {
 	flex: 1 100%;
 	height: 40px;
@@ -341,21 +342,87 @@ input#calculate:hover{
 /*------------------------------------------------------------------------------- 										DESKTOP STYLING
 --------------------------------------------------------------------------------*/
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
 
+	/* Adding gap between logo and content */
 	.logo {
-		padding-bottom: 110px;
+		padding-bottom: 3.5%;
 	}
 
 	.container{
 		padding: 0 140px;
 	}
 
+	/* setting container to flex and positioning everything */
 	main.container {
 		display: flex;
 	}
 
+	#landing-text,
+	#call-to-action {
+		width: 600px;
+	}
 
+	/* putting the bike away */
+	#bike {
+		width: 0px;
+		padding:0 10%;
+	}
+
+	/* Getting new bike out to put behind other items */
+	main {
+		background-image: url(../images/bg-image/scooter.svg);
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: 700px;
+	}
+	
+	/* revealing the longer apply now text */
+	#mobile {
+		display: none;
+	}
+
+	#desktop {
+		display: inline;
+	}
+
+	/* FOOTER ZONE */
+	/* keeping footer on the bottom and trying to stop it from floating, also stopping the scroll bar */
+	footer {
+		position: absolute;
+  		bottom: 0;
+  		width: 100%;
+	}
+
+	/* moving the estimate left and the icons right */
+	#site-footer {
+		display: grid;
+		grid-template-areas: 
+		"estimate social-media";
+		align-items: center
+	}
+
+	#social-media-flex {
+		grid-area: social-media;
+		justify-self: end;
+	}
+
+	/* spacing issues */
+	#social-media {
+		justify-content:space-between;
+		max-width: 260px;
+		min-width: 260px;
+	}
+
+	#estimate {
+		grid-area: estimate;
+		max-width: 615px;
+	}
+}
+
+@media screen and (min-width: 1480px) {
+	
+	/* getting everything to its final state */
 	#landing-text,
 	#call-to-action {
 		width: 536px;
@@ -366,32 +433,4 @@ input#calculate:hover{
 		padding:0 20%;
 	}
 
-	main {
-		background-image: url(../images/bg-image/scooter.svg);
-		background-repeat: no-repeat;
-		background-position:center;
-		background-size: 650px;
-	}
-	
-	
-	
-	
-	
-	
-	#mobile {
-		display: none;
-	}
-
-	#desktop {
-		display: inline;
-	}
-
-	
-
-	
-
-
-	#estimate {
-		max-width: 615px;
-	}
 }
