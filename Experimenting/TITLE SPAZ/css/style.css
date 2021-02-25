@@ -1,0 +1,189 @@
+/* ----------------------------- css reset------------------------------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------------------------------STYLE------------------------------ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FONT STYLES */
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5.063em;
+    color: white;
+}
+
+p {
+    font-size: 1em;
+    color: white;
+}
+
+/* setting header height and positioning */
+header {
+    scroll-snap-align: start;
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+    align-content: stretch;
+    overflow: hidden;
+    animation: slideshow 3s step-end 0s infinite normal none;
+    background-position: center;
+    transition-duration: 0s;
+    scroll-snap-align: center;
+}
+
+/* TITLE FORMATING */
+h1.spaz{
+    font-family: 'UnifrakturCook', 'Times New Ramen', 'Times New Roman', Times, serif;
+    margin-top: 35vh;
+    text-align: center;
+    font-size: 11.391em ;
+    animation: wild 5s linear 0s infinite normal none;
+    color: hotpink;
+}
+
+/* spinning effect */
+@keyframes wild {
+    20% { transform: none ;}
+    40% { transform: rotateX(.5turn) rotateY(.7turn) rotateZ(.3turn) skew(-50deg) ;}
+    60% { transform: rotateX(1.2turn) rotateY(1turn) rotateZ(.4turn) skew(50deg);}
+    80% { transform: rotateX(.7turn) rotateY(.2turn) rotateZ(.8turn) skew(-50deg);}
+}
+
+/* title slideshow */
+@keyframes slideshow {
+    0% {background-image: url("../images/1.jpg");}
+    10% {background-image: url("../images/2.jpg");}
+    20% {background-image: url("../images/3.jpg");}
+    30% {background-image: url("../images/4.jpg");}
+    40% {background-image: url("../images/5.jpg");}
+    50% {background-image: url("../images/6.jpg");}
+    60% {background-image: url("../images/7.jpg");}
+    70% {background-image: url("../images/8.jpg");}
+    80% {background-image: url("../images/9.jpg");}
+    90% {background-image: url("../images/10.jpg");}
+}
+
+/* background color */
+body {
+    background-color: hotpink;
+}
+/* Scroll snapping */
+html,
+body{
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    max-width: 100%;
+
+}
+
+/* about styling */
+.about {
+    scroll-snap-align: start;
+    padding: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.about-text {
+    max-width: 50%;
+    align-self:center;
+    text-align: justify;
+    padding-right: .5em;
+}
+
+.about-img {
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------------------images------------------------- */
+
+.images {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.images-item {
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+} 
+
+.gallery-img {
+  width:50vw;
+}
+
+#img-1 {
+    transform: translate(0, -171px)
+}
+
+#img-2 {
+    transform: translate(0, -20px);
+}
+#img-3 {
+    transform: translate(0, -200px);
+}
+
+#img-4 {
+    transform: translate(0, -300px);
+}
