@@ -15,36 +15,37 @@
 <!-- ----------------------HEADER------------------------------------ -->
 
     <header>
-        <section class="navbar container">
+        <nav class="navbar container">
             <div class="logo">
                 <img src="images/on-grid-audio-logo.svg" alt="On Grid Audio Logo">
             </div>
             <div class="nav">
-                <ul>
-                    <li><a id="current-page" href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                <ul id="nav-links">
+                    <!-- reversed order because of flex direction -->
                     <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a id="current-page" href="index.html">HOME</a></li>
                 </ul>
             </div>
-        </section>
+        </nav>
     </header>
 
 <!-- ---------------------------main----------------------------------------------- -->
 
     <main>
         <!-- landing image with rotating text -->
-        <section class="landing-img">
+        <section class="landing-area">
             <img src="images/on-grid-audio-circle.svg" alt="On grid audio text rotating" class="rotate">
-            <div id="landing-background">
-                <img id="landing-layer-1" class="size" src="images/adi-header.png" alt="picture of the owner">
-                <img id="landing-layer-2" class="size" src="images/adi-header.png" alt="picture of the owner">
-                <img id="landing-layer-3" class="size" src="images/adi-header.png" alt="picture of the owner">
-            </div>
+            <section class="landing-background">
+                <img id="landing-layer-1 " class="size landing-img" src="images/adi-header.png" alt="picture of the owner">
+                <img id="landing-layer-2 " class="size landing-img" src="images/adi-header.png" alt="picture of the owner">
+                <img id="landing-layer-3 " class="size landing-img" src="images/adi-header.png" alt="picture of the owner">
+            </section>
         </section>
         
         <!-- BARCODE GIBBERISH -->
-        <div class="barcode">
-            <p>abcdefgahcbdgehabcghdooacghdemcabghdtacgdheabcdefgahcbdgehabcghdooacghdemcabghdtacgdhe</p>
+        <div class="barcode-box">
+            <p class="barcode">abcdefgahcbdgehabcghdooacghdemcabghdtacgdheabcdefgahcbdgehabcghdooacghdemcabghdtacgdhe</p>
         </div>
 
         <!-- body section -->
