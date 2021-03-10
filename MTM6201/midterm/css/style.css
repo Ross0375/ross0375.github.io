@@ -127,9 +127,6 @@ p {
     top: 200px;
 }
 
-
-
-
 .landing-img {
     grid-column-start: 1 ;
     grid-column-end: 7;
@@ -208,32 +205,47 @@ p {
 
 /* ----------------------------- body section hell---------------------------- */
 
-.section-1 {
+
+
+.section-1-background,
+.section-2-background,
+.section-3-background {
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(25, 1fr);
+    grid-template-columns: 1fr 1fr calc(100vw - 228px) 1fr 1fr ;
+    grid-template-rows: 1fr 1fr calc(100vh - 156px) 1fr 1fr ;
 }
 
 .section-size {
-    justify-self: center ;
     position:relative;
-    width: 100%;
-    grid-row: 1;
-    object-fit: cover;
+    object-fit: fill;
+    max-width: 100%;
 }
 
-.section-1-img-1 {
+.section-1-img-1,
+.section-2-img-1,
+.section-3-img-1 {
     grid-column-start: 1;
-    grid-column-end: 26;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
 }
 
-.section-1-img-2 {
+.section-1-img-2,
+.section-2-img-2,
+.section-3-img-2 {
     grid-column-start: 2;
-    grid-column-end: 25;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
 }
 
-.section-1-img-3 {
+.section-1-img-3,
+.section-2-img-3,
+.section-3-img-3 {
     grid-column-start: 3;
-    grid-column-end: 24;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
