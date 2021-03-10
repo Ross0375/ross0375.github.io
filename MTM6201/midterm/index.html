@@ -21,9 +21,9 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li id="current-page"><a href="index.html">HOME</a></li>
+                    <li><a id="current-page" href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
         </section>
@@ -35,10 +35,10 @@
         <!-- landing image with rotating text -->
         <section class="landing-img">
             <img src="images/on-grid-audio-circle.svg" alt="On grid audio text rotating" class="rotate">
-            <div id="landing-layer-1">
-                <div id="landing-layer-2">
-                    <img src="images/adi-header.png" alt="picture of the owner">
-                </div>  
+            <div id="landing-background">
+                <img id="landing-layer-1" class="size" src="images/adi-header.png" alt="picture of the owner">
+                <img id="landing-layer-2" class="size" src="images/adi-header.png" alt="picture of the owner">
+                <img id="landing-layer-3" class="size" src="images/adi-header.png" alt="picture of the owner">
             </div>
         </section>
         
@@ -49,35 +49,56 @@
 
         <!-- body section -->
         <section class="section-1">
-            <div class="header">
-                <h1>On Grid Audio is an up and coming mobile music production studio</h1>
+            <div class="section-1-background">
+                <img src="images/mpc.jpg" alt="someone using an mpc500" class="section-1-img-1">
+                <img src="images/mpc.jpg" alt="someone using an mpc500" class="section-1-img-2">
+                <img src="images/mpc.jpg" alt="someone using an mpc500" class="section-1-img-3">
             </div>
-            <div class="body-text">
-                <p>Skate ipsum dolor sit amet, cab flip body varial ollie hole nosepicker hang up feeble mini ramp. Hip method air hang ten rocket air half-cab no comply layback. Ledge hang ten boned out kickflip frontside nose grab Eight Dayz nosepicker. Ledge crooked grind lipslide nose bump Jim Phillips bank chicken wing coffin. </p>
-                <a href="about.html" class="button about-link">About Us</a>
+            <div class="container">
+                <div class="header">
+                    <h1>On Grid Audio is an up and coming mobile music production studio</h1>
+                </div>
+                <div class="body-text">
+                    <p>Skate ipsum dolor sit amet, cab flip body varial ollie hole nosepicker hang up feeble mini ramp. Hip method air hang ten rocket air half-cab no comply layback. Ledge hang ten boned out kickflip frontside nose grab Eight Dayz nosepicker. Ledge crooked grind lipslide nose bump Jim Phillips bank chicken wing coffin. </p>
+                    <a href="about.html" class="button about-link">About Us</a>
+                </div>
             </div>
         </section>
 
         <section class="section-2">
-            <div class="header">
-                <h1>Self Sufficient
-
-                    Solar Powered
-                    
-                    Stove Heated</h1>
+            <div class="section-2-background">
+                <img src="images/bus.jpg" alt="bus" class="section-2-img-1">
+                <img src="images/bus.jpg" alt="bus" class="section-2-img-2">
+                <img src="images/bus.jpg" alt="bus" class="section-2-img-3">
             </div>
-            <div class="body-text">
-                <p>Skate ipsum dolor sit amet, durometer transition coper alley oop switch 1080 Steve Chumney. Rails flypaper mini ramp kickturn hurricane crailtap. Grind poseur carve bluntslide locals Japan air. Cab flip slap maxwell lien air freestyle Stacy Peralta hard flip flail. Opposite footed egg plant bank frontside air casper wheels. Tailslide Kevin Harris rip grip pogo hand rail rad Danny Way. Hanger nose blunt shoveit tic-tac alley oop trucks. Rail slide finger flip impossible camel back full-cab face plant. Lien air tic-tac mongo Arto Saari smith grind bearings coping. </p>
+            <div class="container">
+                <div class="header">
+                    <h1>Self Sufficient
+
+                        Solar Powered
+                        
+                        Stove Heated</h1>
+                </div>
+                <div class="body-text">
+                    <p>Skate ipsum dolor sit amet, durometer transition coper alley oop switch 1080 Steve Chumney. Rails flypaper mini ramp kickturn hurricane crailtap. Grind poseur carve bluntslide locals Japan air. Cab flip slap maxwell lien air freestyle Stacy Peralta hard flip flail. Opposite footed egg plant bank frontside air casper wheels. Tailslide Kevin Harris rip grip pogo hand rail rad Danny Way. Hanger nose blunt shoveit tic-tac alley oop trucks. Rail slide finger flip impossible camel back full-cab face plant. Lien air tic-tac mongo Arto Saari smith grind bearings coping. </p>
+                </div>
             </div>
         </section>
 
         <section class="section-3">
-            <div class="header">
-                <h1>We would love to hear from you!</h1>
+            <div class="section-3-background">
+                <img src="images/blake-in-bus.jpg" alt="blake in a bus" class="section-3-img-1">
+                <img src="images/blake-in-bus.jpg" alt="blake in a bus" class="section-3-img-2">
+                <img src="images/blake-in-bus.jpg" alt="blake in a bus" class="section-3-img-3">
             </div>
-            <div class="body-text">
-                <p>Skate ipsum dolor sit amet, cab flip body varial ollie hole nosepicker hang up feeble mini ramp. Hip method air hang ten rocket air half-cab no comply layback. Ledge hang ten boned out kickflip frontside nose grab Eight Dayz nosepicker. Ledge crooked grind lipslide nose bump Jim Phillips bank chicken wing coffin. </p>
-                <a href="about.html" class="button contact-link">Contact Us</a>
+            <div class="container">
+                <div class="header">
+                    <h1>We would love to hear from you!</h1>
+                </div>
+                <div class="body-text">
+                    <p>Skate ipsum dolor sit amet, cab flip body varial ollie hole nosepicker hang up feeble mini ramp. Hip method air hang ten rocket air half-cab no comply layback. Ledge hang ten boned out kickflip frontside nose grab Eight Dayz nosepicker. Ledge crooked grind lipslide nose bump Jim Phillips bank chicken wing coffin. </p>
+                    <a href="about.html" class="button contact-link">Contact Us</a>
+                </div>
             </div>
         </section>
 
@@ -86,11 +107,12 @@
     </main>
 
     <!-- ----------------------------FOOTER-------------------------------------- -->
-    <footer>
+    <footer class="container">
         <ul>
             <li"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact">Contact</a></li>
+            <li><p>© On Grid Audio</p></li>
         </ul>
     </footer>
 
