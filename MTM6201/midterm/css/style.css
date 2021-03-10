@@ -117,47 +117,74 @@ p {
 
 /* -------------------------- landing area---------------------------------------- */
 
-.media .image img {
-    display: block;
-    max-width: 100vw;
-    height: auto;
-  }
+/* landing area making it the right size and grid */
 
-.landing-background {
+.landing-area {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    height: calc(100vh - 100px);    
     position: relative;
-    overflow: hidden;
+    top: 200px;
 }
 
+
+
+
+.landing-img {
+    grid-column-start: 1 ;
+    grid-column-end: 7;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr minmax(350px, 350px) minmax(350px, 350px) 1fr 1fr; /* minmax used to make the center image always square and the specified size*/
+    position: relative;
+    height: 650px;
+    z-index: -2;
+}
+
+/* setting image height and position for all images in stack */
 .size {
-    height: 655px;
+    height: 650px;
+    grid-row: 1;
+    justify-self: center ;
+    width: 100%;
 }
 
 #landing-layer-3 {
     grid-column-start: 3;
     grid-column-end: 5;
-    grid-row: 1;
-    justify-self: center ;
-    width: 100%;
 }
 
 #landing-layer-2 {
     grid-column-start: 2 ;
     grid-column-end: 6;
-    grid-row: 1;
-    justify-self: center ;
-    width: 100%;
 }
 
 #landing-layer-1 {
     grid-column-start: 1 ;
     grid-column-end: 7;
-    grid-row: 1;
-    justify-self: center ;
-    width: 100%;
 }
+
+/* rotating image  */
+
+.rotate {
+    animation: rotation 120s infinite linear;
+    position: relative;
+    bottom: 100px;
+    grid-column-start: 2 ;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: -1;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 
 
 /* -------------barcode---------------------------- */
@@ -170,8 +197,43 @@ p {
 }
 
 .barcode-box {
-    height: 200px;
+    height: 100px;
     border: 1px black solid;
     overflow: hidden; /*IMPORTANT TAG WOW I DIDNT KNOW THIS EXISTED  */
     background-color: white;
 }
+
+
+
+
+/* ----------------------------- body section hell---------------------------- */
+
+.section-1 {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(25, 1fr);
+}
+
+.section-size {
+    justify-self: center ;
+    position:relative;
+    width: 100%;
+    grid-row: 1;
+    object-fit: cover;
+}
+
+.section-1-img-1 {
+    grid-column-start: 1;
+    grid-column-end: 26;
+}
+
+.section-1-img-2 {
+    grid-column-start: 2;
+    grid-column-end: 25;
+}
+
+.section-1-img-3 {
+    grid-column-start: 3;
+    grid-column-end: 24;
+}
+
