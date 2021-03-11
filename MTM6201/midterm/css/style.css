@@ -67,11 +67,13 @@ body {
 h1 {
     font-weight: 900;
     font-size: 60px;
+    color: white;
 }
 
 p {
     font-weight: 500;
     font-size: 20px;
+    color: white;
 }
 
 .nav a {
@@ -191,6 +193,7 @@ p {
     font-size: 400px;
     margin: -22px;
     padding: -22px;
+    color: black;
 }
 
 .barcode-box {
@@ -203,7 +206,7 @@ p {
 
 
 
-/* ----------------------------- body section hell---------------------------- */
+/* ----------------------------- body images hell---------------------------- */
 
 
 
@@ -212,13 +215,13 @@ p {
 .section-3-background {
     display: grid;
     height: 100vh;
+    max-height: 100vh;
     grid-template-columns: 1fr 1fr calc(100vw - 228px) 1fr 1fr ;
     grid-template-rows: 1fr 1fr calc(100vh - 156px) 1fr 1fr ;
 }
 
 .section-size {
     position:relative;
-    object-fit: fill;
     max-width: 100%;
 }
 
@@ -249,3 +252,61 @@ p {
     grid-row-end: 4;
 }
 
+/* -----------------------------------------------------Body Text sections--------------------------------- */
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    column-gap: 16px ;
+    align-items: center;
+}
+
+.header{
+    grid-column: 1 / 6
+}
+
+.body-text {
+    grid-column: 6 / 13;
+}
+
+
+
+/* -----------------------secondary landing pages----------------------------- */
+
+.landing-area.secondary-landing {
+    top: 0px;
+    display:block;
+}
+
+.landing {
+    height: calc(100vh - 100px);
+    width: 100%;
+    object-fit: cover;
+}
+
+/* about fix */
+
+.about {
+    height: 85vh;
+}
+
+.body-text p {
+    padding-top: 1em;
+}
+
+/* -------------------------------------------footer-------------------------------- */
+
+footer {
+    border-top: black 2px solid;
+}
+
+.footer-link {
+    font-size: 20px;
+    color: white;
+}
+
+.footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 3em;
+}
