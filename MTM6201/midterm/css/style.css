@@ -290,9 +290,12 @@ li > a:hover {
     grid-column: 1 / 6
 }
 
-.body-text,
-.contact-form {
+.body-text {
     grid-column: 6 / 13;
+}
+
+.contact-form {
+    grid-column: 7 / 13;
 }
 
 
@@ -328,15 +331,32 @@ li > a:hover {
 
 textarea,
 input {
-    width: 100%;
+    width: calc(100%-1em);
     resize: none;
     outline: none;
     overflow: auto;
     font-family: 'Work Sans', sans-serif ;
     font-size: 20px;
     color: black;
+    border: none;
+    padding: 1em;
 }
 
+textarea {
+    height: 200px;
+    margin:0;
+}
+
+.inputs {
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    height: 60vh;
+}
+
+
+
+/* placeholder text colors and multiple versions for multiple browser support */
 textarea::placeholder,
 input::placeholder {
     color: blue;
