@@ -95,7 +95,7 @@ a {
     grid-template-columns: repeat(12, 1fr) ;
     column-gap: 16px ;
     align-items: center;
-    height: 100%;
+    height: 100px;
 }
 
 #nav > li {
@@ -105,6 +105,12 @@ a {
 /* Aligning all nav items to the grid */
 #logo {
     grid-column: 1 / 6;
+}
+
+/* fixing issue where the logo causes the nav bar to go out of bounds */
+#logo-adjust {
+    height: 5vw;
+    max-height: 90px;
 }
 
 #nav-item-1 {
