@@ -98,6 +98,10 @@ a {
     height: 100%;
 }
 
+#nav > li {
+    text-align: center;
+}
+
 /* Aligning all nav items to the grid */
 #logo {
     grid-column: 1 / 6;
@@ -115,13 +119,21 @@ a {
     grid-column: 11 / 13;
 }
 
+
+/* hover animation */
+
+li > a:hover {
+    color:white;
+    transition-duration: .1s;
+}
+
+/* current page styling and alignment */
 .current-page {
     border: white 2px solid;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column ;
-    text-align: center;
 }
 
 .current-page a {
@@ -278,9 +290,12 @@ a {
     grid-column: 1 / 6
 }
 
-.body-text {
+.body-text,
+.contact-form {
     grid-column: 6 / 13;
 }
+
+
 
 
 
@@ -307,6 +322,41 @@ a {
 .body-text p {
     padding-top: 1em;
 }
+
+
+/* -------------------contact section--------------------------------- */
+
+textarea,
+input {
+    width: 100%;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    font-family: 'Work Sans', sans-serif ;
+    font-size: 20px;
+    color: black;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: blue;
+    opacity: 1;
+}
+  
+textarea:-ms-input-placeholde,
+input:-ms-input-placeholder {
+    color: blue;
+}
+  
+textarea::-ms-input-placeholder,
+input::-ms-input-placeholder {
+    color: blue;
+}
+
+
+
+
+
 
 /* -------------------------------------------footer-------------------------------- */
 
