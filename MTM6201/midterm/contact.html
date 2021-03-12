@@ -14,21 +14,17 @@
  
 <!-- ----------------------HEADER------------------------------------ -->
 
-    <header>
-        <section class="navbar container">
-            <div class="logo">
-                <img src="images/on-grid-audio-logo.svg" alt="On Grid Audio Logo">
-            </div>
-            <div class="nav">
-                <ul id="nav-links">
-                    <!-- reversed order because of flex direction -->
-                    <li><a id="current-page" href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="index.html">HOME</a></li>
-                </ul>
-            </div>
-        </section>
-    </header>
+<header>
+    <section class="navbar container">
+            <ul id="nav">
+                <li  id="logo"><img src="images/on-grid-audio-logo.svg" alt="On Grid Audio Logo"></li>
+                <li id="nav-item-1"><a href="index.html">HOME</a></li>
+                <li id="nav-item-2"><a href="about.html">ABOUT</a></li>
+                <li id="nav-item-3"  class="current-page"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </section>
+</header>
 
 <!-- --------------------------------BODY---------------------------------- -->
     <main>
@@ -41,31 +37,27 @@
             <p class="barcode">abcdefgahcbdgehabcghdooacghdemcabghdtacgdheabcdefgahcbdgehabcghdooacghdemcabghdtacgdhe</p>
         </div>
 
-        <section class="body">
-            <div class="container">
-                <div class="header">
-                    <h1>Hit us up!
+        <section class="body container contact">
+            <div class="header">
+                <h1>Hit us up! </h1>
 
-                        We would love to work with you!</h1>
-                </div>
-                <!-- ------------------------------contact form----------------------------------------- -->
-                <div class="contact-form">
-                    <form action="#" method="post">
-                        <fieldset>
-        
-                            <input id="name" placeholder="Name" type="text" required>
-        
-                            <input id="email" placeholder="Email address" type="email" required>
-
-                            <textarea id="Message">Message </textarea> 
-        
-                            <input class="button" type="submit" value="Submit">
-                        </fieldset>
-                    </form>
-
-                </div>
-                
+                <h1>We would love to work with you!</h1>
             </div>
+        <!-- ------------------------------contact form----------------------------------------- -->
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <fieldset>
+                        <input id="name" placeholder="Name" type="text" required>
+
+                        <input id="email" placeholder="Email address" type="email" required>
+
+                        <textarea id="Message">Message </textarea> 
+    
+                        <input class="button" type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+                
         </section>
     </main>
 
