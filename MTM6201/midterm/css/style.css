@@ -97,11 +97,8 @@ a {
     align-items: center;
     height: 100%;
 }
-/* centers selected  */
-#nav >li {
-    /* text-align: center; */
-}
 
+/* Aligning all nav items to the grid */
 #logo {
     grid-column: 1 / 6;
 }
