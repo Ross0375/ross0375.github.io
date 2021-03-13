@@ -146,7 +146,30 @@ li > a:hover {
     color: white;
     text-decoration: none;
 }
-    
+
+
+/* --------------------------button styling-------------------------------- */
+
+.button {
+    text-align: center;
+    width: calc(100% - 4px);
+    border: 2px white solid;
+    color: white;
+    padding: 36px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+input.button {
+    background-color: blue;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, .32);
+    transition: 0.2s;
+}
 
 /* -------------------------- landing area---------------------------------------- */
 
@@ -214,7 +237,7 @@ li > a:hover {
     to {
       transform: rotate(-360deg);
     }
-  }
+}
 
 
 /* -------------barcode---------------------------- */
@@ -233,9 +256,6 @@ li > a:hover {
     overflow: hidden; /*IMPORTANT TAG WOW I DIDNT KNOW THIS EXISTED  */
     background-color: white;
 }
-
-
-
 
 /* ----------------------------- body images hell---------------------------- */
 
@@ -296,9 +316,6 @@ li > a:hover {
     position: relative;;
 }
 
-/* .landing-body {
-    align-self: center;
-} */
 
 /* -----------------------------------------------------Body Text sections--------------------------------- */
 
@@ -320,6 +337,45 @@ li > a:hover {
 .contact-form {
     grid-column: 7 / 13;
 }
+
+.landing-body {
+    opacity: 0;
+}
+
+/* --------------------------------------------------------------------body section animations */
+
+
+.section-1-background:hover >  .section-1-img-2,
+.section-1-background:hover >  .section-1-img-3 > .section-size,
+.section-2-background:hover >  .section-2-img-2,
+.section-2-background:hover >  .section-2-img-3 > .section-size,
+.section-3-background:hover >  .section-3-img-2,
+.section-3-background:hover >  .section-3-img-3 > .section-size {
+    animation: fade .2s ease-out 0s 1 normal forwards;
+}
+
+.section-1-background:hover >  .section-1-img-3 > .landing-body,
+.section-2-background:hover >  .section-2-img-3 > .landing-body,
+.section-3-background:hover >  .section-3-img-3 > .landing-body {
+    animation: fade-in .2s ease-in 0.2s 1 normal forwards;
+}
+
+@keyframes fade {
+    to {
+    opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    to {
+        display: inline;
+        background-color: rgba(0, 0, 0, .32);
+        opacity: 1;
+    }
+}
+
+/* would use javascript or jquery to animate out but we haven't learned that yet and I don't want to use something I haven't learned or understand */
+
 
 /* -----------------------secondary pages----------------------------- */
 
@@ -412,4 +468,10 @@ footer {
     padding-top: 1em;
     padding-bottom: 1em;
     line-height: 3em;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    background-color: black;
+    transition: .3s;
 }
