@@ -5,3 +5,4 @@
 5. whole lotta responsive shit
 6. COMPRESS LANDING IMAGE AND OPTIMIZE OTHERS
 7. Include Screenshots of mockup
+8. Update rotating img to an expanded svg file without font context
