@@ -179,7 +179,7 @@ input.button {
 .landing-area {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    height: calc(100vh - 100px);    
+    height: calc(100vh - 101px);    
     position: relative;
     top: 200px;
 }
@@ -504,7 +504,7 @@ footer {
 /* removing the  hover animation for mobile devices */
 
 @media (pointer:none), (pointer:coarse) {
-    
+
     .section-1-background >  .section-1-img-2,
     .section-1-background >  .section-1-img-3 > .section-size,
     .section-2-background >  .section-2-img-2,
@@ -574,7 +574,7 @@ footer {
         grid-column: 9 / 13;
     }
 
-    .landing-area, .landing {
+    .landing-area, .secondary-landing {
         height: calc(100vh - 150px); 
     }
 
@@ -633,6 +633,5 @@ footer {
         grid-column: 2 / 12;
     }
 
-    
 
 }
