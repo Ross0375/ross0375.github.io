@@ -7,3 +7,4 @@
 7. COMPRESS LANDING IMAGE AND OPTIMIZE OTHERS
 8. [DONE] Include Screenshots of mockup [DONE]
 9. [DONE] Update rotating img to an expanded svg file without font context [DONE]
+10. About and contact page positioning on smaller sizes
