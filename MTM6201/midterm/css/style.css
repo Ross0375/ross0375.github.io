@@ -218,6 +218,25 @@ input.button {
     grid-column-end: 7;
 }
 
+/* secondary landing image sizing */
+
+.secondary-area {
+    top: 0;
+    display: block;
+}
+
+.secondary-img {
+    display: block;
+    height: calc(100vh - 101px);
+}
+
+.secondary-size {
+    display: inline-block;
+    height: calc(100vh - 101px);
+    width: 100%;
+    object-fit: cover;
+}
+
 /* rotating image  */
 
 .rotate {
@@ -399,19 +418,8 @@ input.button {
 
 /* -----------------------secondary pages----------------------------- */
 
-.landing-area.secondary-landing {
-    top: 0px;
-    display:inline;
-    margin-bottom: -1em;
-}
 
-.landing {
-    height: calc(100vh - 100px);
-    width: 100%;
-    object-fit: cover;
-}
-
-/* about fix */
+/* about position fix */
 
 .about,
 .contact {
@@ -574,11 +582,9 @@ footer {
         grid-column: 9 / 13;
     }
 
-    .landing-area, .secondary-landing {
+    .landing-area{
         height: calc(100vh - 150px); 
     }
-
-    .landing
 
     /* font sizing */
 
