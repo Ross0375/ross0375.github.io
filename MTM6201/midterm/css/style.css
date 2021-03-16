@@ -756,8 +756,15 @@ footer {
 }
 
 /* literally just for iphones */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
     section.landing-area {
         min-height: 50vh;
+    }
+}
+
+/* if your screen is smaller then this god help you, I don't think I'm talented enough to add DSI resolution support */
+@media screen and (max-width: 400px) {
+    section.landing-area {
+        min-height: 40vh;
     }
 }

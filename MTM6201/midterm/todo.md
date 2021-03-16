@@ -2,9 +2,9 @@
 2. [DONE] fix landing page image sections [DONE]
 3. [DONE] finish landing page text sections [DONE]
 4. [DONE] add body section text hover animation [DONE]
-5. whole lotta responsive shit [90%]
+5. [DONE] whole lotta responsive shit [DONE]
 6. [DONE] FIX THAT STUPID LINE [DONE]
-7. COMPRESS LANDING IMAGE AND OPTIMIZE OTHERS
+7. [DONE] COMPRESS LANDING IMAGE AND OPTIMIZE OTHERS [DONE]
 8. [DONE] Include Screenshots of mockup [DONE]
 9. [DONE] Update rotating img to an expanded svg file without font context [DONE]
 10. [DONE] About and contact page positioning on smaller sizes [DONE]

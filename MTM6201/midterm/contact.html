@@ -30,7 +30,15 @@
     <main>
         <div class="landing-area secondary-area">
             <div class="landing-img secondary-img">
-                <img src="images/blake-in-bus.jpg" alt="bus" class="secondary-size">
+                <img srcset=
+                    "images/blake-in-bus-1000.jpg 1000w,
+                    images/blake-in-bus-1280.jpg 1280w,
+                    images/blake-in-bus-1920.jpg 1920w" 
+                sizes=
+                    "(max-width: 1000px) 1000px,
+                    (max-width: 1280px) 1280px,
+                    (max-width: 1920px) 1920px" 
+                alt="bus" class="secondary-size">
             </div>
         </div>
 
