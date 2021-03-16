@@ -277,7 +277,8 @@ input.button {
 
 /* -------------barcode divider---------------------------- */
 
-/* came up with this idea awhile ago of using a google font instead of an image here, can be viewed on my github */
+/* came up with this idea awhile ago of using a google font instead of an image here, can be viewed on my github https://ross0375.github.io/MTM6201/Barcode-Divider/
+for some reason it is unable to download the css for me right now :/ */
 
 .barcode {
     font-family: 'Libre Barcode EAN13 Text', none;
@@ -289,7 +290,7 @@ input.button {
 .barcode-box {
     height: 100px;
     border: 1px black solid;
-    overflow: hidden; /*IMPORTANT TAG WOW I DIDNT KNOW THIS EXISTED  */
+    overflow: hidden; /* important to this specific design, sorry */
     background-color: white;
 }
 
@@ -312,6 +313,7 @@ input.button {
     object-fit: cover;
 }
 
+/* positioning everything overtop of eachother, and I used both start and end cause I wasn't as good as grid as near the end of the project */
 .section-1-img-1,
 .section-2-img-1,
 .section-3-img-1 {
@@ -400,6 +402,7 @@ input.button {
 
 /* --------------------------------------------------------------------body section animations------------------------------------ */
 
+/* having the stacks of images fade out while having the text fade in with the opaque background */
 
 .section-1-background:hover >  .section-1-img-2,
 .section-1-background:hover >  .section-1-img-3 > .section-size,
@@ -551,7 +554,10 @@ footer {
 
     main {
         overflow: hidden; 
-        /* THIS IS A LAZY FIX I KNOW BUT ITS THE ONLY WAY I COULD GET THIS ROTATING IMAGE TO STOP RESIZING THE PAGE, overflow hidden is not used anywhere else in the website before this though */
+        /* THIS IS A LAZY FIX I KNOW BUT ITS THE ONLY WAY I COULD GET THIS ROTATING IMAGE TO STOP RESIZING THE PAGE
+        also has to be on main because it cuts the top off the image otherwise
+        could not find anything else to fix this issue on the internet because every single stackoverflow page says: "oH JuSt UsE oVeRFlOw: hIdDeN;" like I didn't already think of that
+        */
     }
 }
 
@@ -721,6 +727,8 @@ footer {
 }
 
 /* -----------------------------extreme mobile styling-------------------------------- */
+
+/* font sizing */
 
 @media screen and (max-width: 650px) {
     section.landing-area{
