@@ -195,7 +195,7 @@ input.button {
     height: calc(100vh - 101px);    
     position: relative;
     width: 100%;
-    top: 200px;
+    top: 220px;
 }
 
 .landing-img {
