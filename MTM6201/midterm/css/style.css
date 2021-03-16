@@ -52,9 +52,14 @@ table {
 
 /* ------------------------------------------- CUSTOM STYLES---------------------------------------------------- */
 
+:root {
+    --container-padding: 114px;
+    --container-padding-total: calc(var(--container-padding) * 2);
+}
+
 .container {
     margin: 0 auto;
-    padding: 0px 114px;
+    padding: 0px var(--container-padding);
 }
 
 /* text styling */
@@ -110,7 +115,7 @@ a {
 
 /* fixing issue where the logo causes the nav bar to go out of bounds */
 #logo-adjust {
-    height: 5vw;
+
     max-height: 90px;
 }
 
@@ -182,6 +187,7 @@ input.button {
     grid-template-columns: repeat(6, 1fr);
     height: calc(100vh - 101px);    
     position: relative;
+    width: 100%;
     top: 200px;
 }
 
@@ -192,13 +198,13 @@ input.button {
     display: grid;
     grid-template-columns: 1fr 1fr minmax(350px, 350px) minmax(350px, 350px) 1fr 1fr; /* minmax used to make the center image always square and the specified size*/
     position: relative;
-    height: 650px;
+    max-height: 650px;
     z-index: -2;
 }
 
 /* setting image height and position for all images in stack */
 .size {
-    height: 650px;
+    max-height: 650px;
     grid-row: 1;
     justify-self: center ;
     width: 100%;
@@ -285,7 +291,7 @@ input.button {
 .section-3-background {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr calc(100vw - 228px) 1fr 1fr ;
+    grid-template-columns: 1fr 1fr calc(100vw - var(--container-padding-total)) 1fr 1fr ;
     grid-template-rows: 1fr 1fr calc(100vh - 156px) 1fr 1fr ;
 }
 
@@ -537,13 +543,17 @@ footer {
         background-color: green;
     }
 
+    #logo-adjust {
+        margin: 5px;
+    }
+
     .landing-area {
         grid-template-columns: 1fr 1fr 400px 400px 1fr 1fr;
     }
 
     main {
         overflow: hidden; 
-        /* THIS IS A LAZY FIX I KNOW BUT ITS THE ONLY WAY I COULD GET THIS ROTATING IMAGE TO STOP RESIZING THE PAGE, overflow hidden is not used anywhere else in the website though, before this */
+        /* THIS IS A LAZY FIX I KNOW BUT ITS THE ONLY WAY I COULD GET THIS ROTATING IMAGE TO STOP RESIZING THE PAGE, overflow hidden is not used anywhere else in the website before this though */
     }
 }
 
@@ -593,25 +603,8 @@ footer {
         font-size: 50px;
     }
 
-    .section-2-img-3 > .landing-body > .header > h1 {
-        font-size: 35px
-    }
-}
 
-@media screen and (max-width: 850px) {
-    
-    body{
-        background-color: orange;
-    }
-
-    /* font size back up due to realign */
-
-    .section-2-img-3 > .landing-body > .header > h1 {
-        font-size: 50px
-    }
-
-    /* changing alignment */
-
+    /* ---------------------body alignment------------------------------ */
     .body{
         grid-template-columns: repeat(12, 1fr) ;
         grid-template-rows: 1fr 1fr;
@@ -638,6 +631,20 @@ footer {
     
     .landing-body > .body-text {
         grid-column: 2 / 12;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    
+    body{
+        background-color: orange;
+    }
+
+    /* changing alignment */
+
+    :root{
+        --container-padding: 50px;
     }
 
     /* NAV STACKING */
@@ -682,4 +689,59 @@ footer {
     #nav-item-3 {
         grid-row: 4 / 5;
     }
+
+
+    /* ---------------------------landing stacking-------------- */
+
+    .landing-img {
+        grid-template-columns: 1fr;
+    }
+
+    #landing-layer-3,
+    #landing-layer-2,
+    #landing-layer-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        object-fit: cover;
+    }
+
+    /* about/contact sizing */
+    .about,
+    .contact {
+        height: 100%;
+        padding-bottom: 2em;
+    }
+}
+
+/* -----------------------------extreme mobile styling-------------------------------- */
+
+@media screen and (max-width: 650px) {
+    
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    .body{
+        grid-template-rows: .8fr 1.2fr;
+    }
+
+    .inputs > * {
+        margin-top: 1em;
+    }
+
+    textarea,
+    input {
+        font-size: 15px;
+    }
+
+
+
 }
