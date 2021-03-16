@@ -86,7 +86,13 @@ a {
     font-weight: 300;
     font-style: italic;
     font-size: 24px;
-    color: black;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: black;
+    transition: .3s;
 }
 
 /* ----------------------nav------------------------------ */
@@ -134,10 +140,7 @@ a {
 
 /* hover animation */
 
-li > a:hover {
-    color:white;
-    transition-duration: .1s;
-}
+
 
 /* current page styling and alignment */
 .current-page {
@@ -152,6 +155,10 @@ li > a:hover {
 .current-page a {
     color: white;
     text-decoration: none;
+}
+
+.current-page > a:hover {
+    background-color: none;
 }
 
 
@@ -497,7 +504,6 @@ footer {
 
 .footer-link {
     font-size: 20px;
-    color: white;
 }
 
 .footer {
@@ -506,11 +512,6 @@ footer {
     line-height: 3em;
 }
 
-.footer a:hover {
-    text-decoration: none;
-    background-color: black;
-    transition: .3s;
-}
 
 
 
