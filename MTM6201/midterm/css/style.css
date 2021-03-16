@@ -53,8 +53,9 @@ table {
 /* ------------------------------------------- CUSTOM STYLES---------------------------------------------------- */
 
 :root {
+    /* this is giving me a css validator parse error and I dont think I can fix that */
     --container-padding: 114px;
-    --container-padding-total: calc(var(--container-padding) * 2);
+    --container-padding-total: calc(var(--container-padding) * 2 );
 }
 
 .container {
@@ -63,6 +64,7 @@ table {
 }
 
 /* text styling */
+
 body {
     font-family: 'Work Sans', sans-serif ;
     background-color: blue;
@@ -89,6 +91,7 @@ a {
     color: white;
 }
 
+/* link animations */
 a:hover {
     text-decoration: none;
     background-color: black;
@@ -119,10 +122,10 @@ a:hover {
     grid-column: 1 / 6;
 }
 
-/* fixing issue where the logo causes the nav bar to go out of bounds */
-#logo-adjust {
 
+#logo-adjust {
     max-height: 90px;
+    margin: 5px;
 }
 
 #nav-item-1 {
@@ -136,11 +139,6 @@ a:hover {
 #nav-item-3 {
     grid-column: 11 / 13;
 }
-
-
-/* hover animation */
-
-
 
 /* current page styling and alignment */
 .current-page {
@@ -157,8 +155,9 @@ a:hover {
     text-decoration: none;
 }
 
+/* removing link hover animation for the current page */
 .current-page > a:hover {
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -179,6 +178,8 @@ a:hover {
 input.button {
     background-color: blue;
 }
+
+/* animation */
 
 .button:hover {
     background-color: rgba(0, 0, 0, .32);
@@ -232,7 +233,7 @@ input.button {
     grid-column-end: 7;
 }
 
-/* secondary landing image sizing */
+/* secondary pages landing image sizing */
 
 .secondary-area {
     top: 0;
@@ -251,7 +252,7 @@ input.button {
     object-fit: cover;
 }
 
-/* rotating image  */
+/* rotating image positioning and animation */
 
 .rotate {
     animation: rotation 120s infinite linear;
@@ -274,13 +275,14 @@ input.button {
 }
 
 
-/* -------------barcode---------------------------- */
+/* -------------barcode divider---------------------------- */
+
+/* came up with this idea awhile ago of using a google font instead of an image here, can be viewed on my github */
 
 .barcode {
     font-family: 'Libre Barcode EAN13 Text', none;
     font-size: 400px;
     margin: -22px;
-    padding: -22px;
     color: black;
 }
 
@@ -298,6 +300,7 @@ input.button {
 .section-3-background {
     display: grid;
     height: 100vh;
+    /* another unavoidable css validator error, can't fix ¯\_(ツ)_/¯ */
     grid-template-columns: 1fr 1fr calc(100vw - var(--container-padding-total)) 1fr 1fr ;
     grid-template-rows: 1fr 1fr calc(100vh - 156px) 1fr 1fr ;
 }
@@ -449,6 +452,7 @@ input.button {
 
 textarea,
 input {
+    /* once again same parse error */
     width: calc(100%-1em);
     resize: none;
     outline: none;
@@ -540,9 +544,6 @@ footer {
 
 /* rotating img sizing */
 @media screen and (max-width: 1750px){
-    #logo-adjust {
-        margin: 5px;
-    }
 
     .landing-area {
         grid-template-columns: 1fr 1fr 400px 400px 1fr 1fr;
@@ -643,7 +644,7 @@ footer {
     }
 
     #nav {
-        grid-template-rows: repeat(4 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 1fr;
         height: 100%;
         align-content: space-around;
