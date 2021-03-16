@@ -138,6 +138,7 @@ li > a:hover {
 .current-page {
     border: white 2px solid;
     height: 100%;
+    max-height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column ;
@@ -639,5 +640,46 @@ footer {
         grid-column: 2 / 12;
     }
 
+    /* NAV STACKING */
 
+    .navbar {
+        height: 400px;
+    }
+
+    #nav {
+        grid-template-rows: repeat(4 1fr);
+        grid-template-columns: 1fr;
+        height: 100%;
+        align-content: space-around;
+        align-items: center;
+    }
+
+    .navbar.container {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #nav > * {
+        grid-column: 1 / 2;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #logo {
+        grid-row: 1 / 2;
+    }
+
+    #nav-item-1 {
+        grid-row: 2 / 3;
+    }
+
+    #nav-item-2 {
+        grid-row: 3 / 4;
+    }
+
+    #nav-item-3 {
+        grid-row: 4 / 5;
+    }
 }
