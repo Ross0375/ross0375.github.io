@@ -539,10 +539,6 @@ footer {
 
 /* rotating img sizing */
 @media screen and (max-width: 1750px){
-    body {
-        background-color: green;
-    }
-
     #logo-adjust {
         margin: 5px;
     }
@@ -559,10 +555,6 @@ footer {
 
 
 @media screen and (max-width: 1100px){
-    body {
-        background-color: red;
-    }
-
     .rotate {
         grid-column: 1 / 7;
     }
@@ -636,10 +628,6 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
-    
-    body{
-        background-color: orange;
-    }
 
     /* changing alignment */
 
@@ -711,12 +699,33 @@ footer {
         height: 100%;
         padding-bottom: 2em;
     }
+
+    /* ----------landing positioning------------------ */
+    section.landing-area {
+        grid-template-columns: 1fr;
+        top: 100px;
+        height: 85vw;
+        min-height: 60vh;
+    }
+
+    .rotate,
+    section.landing-img {
+        grid-column: 1 / 2;
+    }
+
+    .rotate {
+        bottom: -50px;
+    }
 }
 
 /* -----------------------------extreme mobile styling-------------------------------- */
 
 @media screen and (max-width: 650px) {
-    
+    section.landing-area{
+    height: 100vw;
+    min-height: 60vh;
+    }
+
     h1 {
         font-size: 30px;
     }
@@ -742,6 +751,12 @@ footer {
         font-size: 15px;
     }
 
+    
+}
 
-
+/* literally just for iphones */
+@media screen and (max-width: 400px) {
+    section.landing-area {
+        min-height: 50vh;
+    }
 }
