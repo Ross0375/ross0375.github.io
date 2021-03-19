@@ -152,7 +152,7 @@ a {
     margin-top: 1em;
 }
 
-/* ---------------------------body----------------------------------- */
+/* ---------------------------body general----------------------------------- */
 
 img {
     width: 100%;
@@ -160,4 +160,40 @@ img {
 
 .main-content {
     margin-bottom: 100px;
+}
+
+/* about me list */
+
+.itemization {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.itemization > div > ul > * {
+    text-align: center;
+}
+
+.col-2 > ul {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.col-2 > ul > li:last-child {
+    margin-top: auto;
+}
+
+/* --------------------works main page------------------------ */
+
+.works {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding
+}
+
+.works > *  {
+    text-align: center;
+    height: 100%;
+    padding-bottom: .5em;
 }

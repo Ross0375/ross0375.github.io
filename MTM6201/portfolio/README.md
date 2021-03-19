@@ -3,7 +3,9 @@
 
 Welcome to my portfolio, I will be keeping this log of all issues I faced and anything that goes wrong.
 Hopefully there'll be less bs then the last project considering this is a much simpler design, just a lot more pages.
-Maybe to challenge myself I will try to make it as dry as possible, we shall see
+Aligning the need to reach me section on the about page is giving me troubles, currently trying to flex it down.
+Tried using justify-self/align-self, that didn't work, turns out the simple way is the easiest, just use margin-top: auto; (still used flex box though)
+The works page is pretty simple, just using grids, easy to change later on for other responsive states, I just had an idea though, if I included bootstrap I could do carousels for the images just to rotate through all of them on the main works page. [IMPORTANT] REMEMBER TO DO THIS LATER. (gonna make a todo list now)
 
 
 
@@ -15,3 +17,14 @@ Maybe to challenge myself I will try to make it as dry as possible, we shall see
 - Google Fonts!
     - Roboto - Christian Robertson
     - Playfair Display - Claus Eggers Sørensen
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TODOLIST~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. finish mobile layout
+2. add bootstrap and add carousel to the works landing page
+3. animations (hovers, clicks, load ins etc)
+4. Responsive states
+5. 
