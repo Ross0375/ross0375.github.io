@@ -25,10 +25,10 @@
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item col-2">
-                    <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    <a class="nav-link"  href="about.html">About</a>
                   </li>
                   <li class="nav-item col-2">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -41,17 +41,27 @@
         <div class="container d-flex" style="height: 90vh;">
             <div class="row justify-content-center">
                 <div class="col-4 text-center my-auto">
-                    <h1>Hello,</h1>
+                    <h1>Reach out!</h1>
                     <h2 class="h4">we are swag</h2>
                     
                 </div>
                 <div class="col-8 my-auto">
-                    <p> 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae porta diam, eget lacinia massa. Maecenas eget ligula nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut diam sagittis, facilisis turpis vel, porttitor ligula. Ut vel magna ut elit rhoncus convallis. Proin sit amet elementum dui. Suspendisse accumsan libero orci, nec congue orci imperdiet vitae. Sed at fringilla neque. Nam vitae orci interdum, sagittis sem eget, varius arcu. Fusce et metus dictum mauris porttitor ullamcorper in nec nisl.
-                    </p>
-                    <p>
-                        Aenean ut ultrices nibh, et elementum mauris. In at erat sed nisi volutpat auctor. Suspendisse dictum mi vitae egestas eleifend. Vivamus tincidunt purus et finibus dictum. Aenean auctor eu purus nec pretium. Pellentesque at imperdiet metus, vestibulum eleifend elit. Maecenas pellentesque nibh elementum neque vehicula, ut convallis mi pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce odio odio, maximus scelerisque nibh eget, consequat maximus massa. Vestibulum sed aliquam mi, interdum accumsan lacus. Morbi eget lacus et mi tincidunt efficitur ac eget orci. Aenean tincidunt sapien vel nulla suscipit ultrices.
-                    </p>
+                    <form class="container">
+                        <div class="form-group row col">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+    
+                        <div class="form-group row col">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Full Name">
+                        </div>
+
+                        <div class="form-group row col">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" style="resize: none; height: 4rem;"></textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
