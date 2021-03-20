@@ -87,12 +87,13 @@ a {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 25px;
-
+    padding: .2em 0px;
 }
 
 h2 {
     font-weight: 400;
     font-size: 20px;
+    padding: .2em 0px;
 }
 
 p,
@@ -189,11 +190,25 @@ img {
 .works {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    padding
+    padding-bottom: 50px;
 }
 
-.works > *  {
+.works > a > p {
     text-align: center;
-    height: 100%;
-    padding-bottom: .5em;
+    padding-bottom: .8em;
+}
+
+.works > img {
+    padding-bottom: 2em;
+}
+
+.im {
+   font-size: 1em;
+}
+
+.return {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 2em 0px;
 }
