@@ -56,10 +56,12 @@ table {
     --primary: #E54B4B;
     --faded-black: #222222;
     --nav-height: 60px;
+    --padding-sm: 0px 35px;
+    --padding-md: 0px 100px;
 }
 
 .container {
-    padding: 0px 35px;
+    padding: var(--padding-sm);
     margin: 0 auto;
 }
 
@@ -280,4 +282,33 @@ input:-ms-input-placeholder {
 textarea::-ms-input-placeholder,
 input::-ms-input-placeholder {
     color: var(--faded-black);
+}
+
+@media screen and (min-width: 850px) {
+
+    .container {
+        padding: var(--padding-md);
+    }
+
+    /* ------------------------nav bar--------------------------------- */
+
+    #nav.container {
+        padding: var(--padding-md);
+        margin-bottom: 1em;
+    }
+
+    #nav {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 16px;
+    }
+
+    #nav > li:nth-child(2) {
+        grid-column: 5 / 6 ;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
 }
