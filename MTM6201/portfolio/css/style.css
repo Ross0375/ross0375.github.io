@@ -144,7 +144,7 @@ a {
 
 .button {
     text-align: center;
-    width: calc(100% - 4px);
+    width: 100% ;
     border: 2px var(--faded-black) solid;
     padding: calc(50px / 2 - 4px) 0px;
     text-align: center;
@@ -170,7 +170,7 @@ img {
     grid-template-columns: 1fr 1fr;
 }
 
-.itemization > div > ul > * {
+div > ul > * {
     text-align: center;
 }
 
@@ -202,6 +202,10 @@ img {
     padding-bottom: 2em;
 }
 
+.works:last-child {
+    padding-bottom: 0em;
+}
+
 .im {
    font-size: 1em;
 }
@@ -211,4 +215,69 @@ img {
     display: flex;
     align-items: center;
     margin: 2em 0px;
+}
+
+/* --------------contact----------------------------------- */
+
+.contact > * {
+    text-align: center;
+}
+
+.contact > div > ul > li,
+.contact > h1 {
+    padding-bottom: 3rem;
+}
+
+.contact-links > i {
+    font-size: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+textarea,
+input {
+    width: calc(100%-1em);
+    resize: none;
+    outline: none;
+    overflow: auto;
+    font-family: 'Work Sans', sans-serif ;
+    font-size: 16px;
+    color: var(--faded-black);
+    border: 1px var(--faded-black) solid;
+    padding: .5em;
+}
+
+textarea {
+    height: 200px;
+    margin:0;
+}
+
+.inputs {
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    height: 60vh;
+}
+
+
+
+/* once again using a fix to make it viable on other browsers */
+textarea::placeholder,
+input::placeholder {
+    color: var(--faded-black);
+    opacity: 1;
+}
+  
+textarea:-ms-input-placeholde,
+input:-ms-input-placeholder {
+    color: var(--faded-black);
+}
+  
+textarea::-ms-input-placeholder,
+input::-ms-input-placeholder {
+    color: var(--faded-black);
 }

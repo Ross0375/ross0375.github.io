@@ -27,7 +27,7 @@ Might add a return button to the bottom of these pages instead of the top just b
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TODOLIST~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. finish mobile layout
+1. finish mobile layout [DONE]
 2. add bootstrap and add carousel to the works landing page
 3. animations (hovers, clicks, load ins etc)
 4. Responsive states
