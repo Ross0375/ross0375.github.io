@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <title>Test Site</title>
+    <title>Bootstrap This!</title>
   </head>
   <body>
       <header>
@@ -21,10 +21,17 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav container-lg justify-content-end text-center">
                   <li class="nav-item col-2">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Landing</a>
                   </li>
-                  <li class="nav-item col-2">
-                    <a class="nav-link" href="about.html">About</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Components
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#components">Components Area</a></li>
+                      <li><a class="dropdown-item" href="#grids">Grids Grids Grids!</a></li>
+                      <li><a class="dropdown-item" href="#btn-zone">Button Zone</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item col-2">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -38,10 +45,10 @@
     <main>
             <!-- --------------------------------LANDING------------------------------- -->
             <div class="container vh-100 row align-items-center mx-auto" id="landing">
-                <div class="col-6">
-                    <img src="images/bootstrap-solid.svg" alt="bootstrap logo" class="mx-auto w-75">
+                <div class="col-sm-12 col-md-6">
+                    <img src="images/bootstrap-solid.svg" alt="bootstrap logo" class=" d-block mx-auto w-75">
                 </div>
-             <div class="col-6 shadow-lg p-3 mb-5 rounded">
+             <div class="col-sm-12 col-md-6 shadow-lg p-3 mb-5 rounded">
                     <h1>About Bootstrap</h1>
                     <p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins,     responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
                 </div>
@@ -52,7 +59,7 @@
             <section class="shadow-lg">
 
 
-                <section class="container row align-items-center mx-auto my-3">
+                <section class="container row align-items-center mx-auto my-3 pt-3" id="components">
                     <div class="col-sm-12 col-lg-6 shadow-lg rounded my-3">
                         <h1>Components</h1>
                      <p>Bootstrap is fantastic for fast development of professional looking websites without knowledge of javascript, just a basic understanding of html and css is required     to start making websites. One of my favorite components in Bootstrap is the carousel, showing multiple images in one box, slowly rotating throughout, without any   knowledge of javascript required.</p>
@@ -73,9 +80,9 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="container">
-                    <div class="row mx-auto h-100">
+                <!-- --------------------------Grids / Accordion---------------------- -->
+                <section class="container border-top pt-3" id="grids">
+                    <div class="row mx-auto pt-5 pb-5">
                         <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
                             <p class="h1">
                                 Grids Grids Grids!
@@ -85,11 +92,87 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
                             <p>If you resize you will notice that everything will move to a different position. This is all done without even touching any css.</p>
                         </div>
-                        <div class="col-sm-12 col-lg-4 my-auto text-center">
-                            <p>This too!</p>
+                        <div class="col-sm-12 col-lg-4 mt-lg-auto">
+                            <div class="accordion">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Other components work too! (Like this one)
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                                  <div class="accordion-body">
+                                    <strong>This is the accordion!</strong> It's a way to hide text under a small dropdown for those to read when they're interested, or to just skip over. You can choose whether it's open by default or not, along with other minor options like removing the border and changing the colour.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+                <!-- -----------------------cards / images ------------------------------>
+
+
+                <section class="container border-top py-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-lg-4">
+                      <div class="card w-100">
+                        <img src="https://picsum.photos/id/237/200/200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Cards are also a component built into Bootstrap. They're a great way to display small packets of information. YOu can put almost anything into them and they will work! Very easy to use and understand</p>
+                          <a href="#" class="btn btn-primary">Back to top</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                      <div class="card w-100">
+                        <div class="card-body">
+                          <h5 class="card-title">You don't even need images.</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Just text will work too.</h6>
+                          <p class="card-text">As you can see they are very flexible and can be used for whatever you want them to be used for. Just a few lines of code and you're ready to go.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                      <div class="card">
+                        <div class="card-header">
+                          You can do quotes in cards too!
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                            <p>"You miss 100% of the shots you don't take." - Wayne Gretsky</p>
+                            <footer class="blockquote-footer">Michael Scott</footer>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- ---------------------Button Zone-------------------------- -->
+
+                <section class="container border-top pt-3" id="btn-zone">
+                  <div class="row vh-100 my-auto">
+                    <div class="col-sm-12 col-md-6 shadow-lg rounded my-auto">
+                      <h3 class="h1">Button Zone</h3>
+                      <p>Buttons come in many diferent colours and styles in Bootstrap. and they can be as big or assmall as you want (font size and desktop space permitting) You can have solid buttons, button outlines, disabled buttons, buttons that look like buttons but aren't actually buttons. (I don't know whay you would want to do this but just incase.) All it takes is a couple of class and it already looks professional. Just take a look at all these buttons!
+                      </p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 my-auto">
+                      <button class="btn btn-primary m-2">Primary Button</button>
+                      <button class="button btn btn-outline-dark m-2">Button outlined</button>
+                      <button class="btn btn-danger m-2">DANGER DANGER DANGER</button>
+                      <button class="btn btn-warning m-2">Be careful around this one, this ones a warning.</button>
+                      <button class="btn btn-outline-success m-2">You did it!</button>
+                      <button class="btn btn-secondary m-2" disabled>Disabled button</button>
+                      <button type="button" class="btn btn-outline-info btn-lg">Large info button</button>
+                      <a href="#" class="btn btn-sm btn-primary m-2">Small link button (back to top)</a>
+                    </div>
+                  </div>
+                </section>
+                
+
 
             </section>
 
