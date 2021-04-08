@@ -264,7 +264,18 @@ textarea {
     display: flex;
     flex-flow:column nowrap;
     justify-content: space-around;
-    height: 60vh;
+}
+
+.inputs > *:not(:last-child) {
+    margin-bottom: .5em;
+}
+
+.inputs > button {
+    margin-top: 0;
+}
+
+.contact-text > div > ul > li {
+    margin-bottom: 30px;
 }
 
 
@@ -346,11 +357,11 @@ input::-ms-input-placeholder {
         margin: 0;
     }
 
-    .main-content > img {
+    .main-content > .portrait {
         grid-column: 1 / 4;
     }
 
-    .body-text {
+    .landing-text {
         grid-column: 4 / 9 ;
     }
 
@@ -360,12 +371,39 @@ input::-ms-input-placeholder {
     #about {
         display: block
     }
+
+    /* ----------------------works pages-------------------------- */
+
+    
+    .works > * {
+        grid-column-start: span 4;
+        margin-top: 1em;
+        font-size: 30px;
+    }
+
+    .works > .body-text {
+        display: block;
+    }
+
+    /* -----------------contact page---------------------- */
+
+    .contact-text {
+        grid-column-start: span 3;
+    }
+
+    .contact-form {
+        grid-column-start: span 5;
+    }
+
+    .contact-text > div > ul > li {
+        margin-bottom: 35px;
+    }
 }
 
 
 @media screen and (min-width: 998px) {
 
-    /* additional query for header alignment */
+    /* h1 size */
     h1 {
         font-size: 40px;
     }
