@@ -58,6 +58,7 @@ table {
     --nav-height: 60px;
     --padding-sm: 0px 35px;
     --padding-md: 0px 100px;
+    --padding-lg: 0px 140px;
 }
 
 .container {
@@ -423,5 +424,94 @@ input::-ms-input-placeholder {
 
     .itemization {
         grid-column: 5 / 9;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+
+    /* font sizes */
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    /* margins */
+
+    .container {
+        padding: var(--padding-lg);
+    }
+
+    /* ---------------------------nav------------------------- */
+
+    #nav.container {
+        padding: var(--padding-lg);
+    }
+
+    #nav {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #nav > li:nth-child(2) {
+        grid-column: 7 / 8 ;
+    }
+
+    /* ---------------------------body--------------------------- */
+
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .main-content > .portrait {
+        grid-column: 1 / 6;
+     }
+    
+    .landing-text {
+        grid-column: 7 / 13 ;
+    }
+
+    /* -------------about section ------------------ */
+
+    .itemization > div > ul > li:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    #about > .body-text {
+        grid-column: 1 / 7;
+    }
+
+    .itemization {
+        grid-column: 7 / 13;
+    }
+
+    /* ----------------------works pages-------------------------- */
+
+    
+    .works > * {
+        grid-column-start: span 6;
+    }
+
+    /* -----------------contact page---------------------- */
+
+    .contact-text {
+        grid-column: 2 / 5;
+    }
+
+    .contact-form {
+        grid-column: 6 / 13;
+    }
+
+    .contact-text > div > ul > li {
+        margin-bottom: 60px;
     }
 }
