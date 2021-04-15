@@ -160,6 +160,7 @@ p {
     text-decoration: none;
     display: inline-block;
     margin-top: 1em;
+    background-color: white;
 }
 
 /* ---------------------------body general----------------------------------- */
@@ -224,6 +225,10 @@ div > ul > li > * {
     display: flex;
     align-items: center;
     margin: 2em 0px;
+    position: sticky;
+    top: 10px;
+    /* safari support */
+    position: -webkit-sticky;
 }
 
 /* --------------contact----------------------------------- */
@@ -386,6 +391,10 @@ input::-ms-input-placeholder {
         font-size: 30px;
     }
 
+    .works .main-content {
+        height: 100%;
+    }
+
     .works > .body-text {
         display: block;
     }
@@ -436,10 +445,6 @@ input::-ms-input-placeholder {
 
     /* font sizes */
 
-    h1 {
-        font-size: 60px;
-    }
-
     h2 {
         font-size: 30px;
     }
@@ -484,6 +489,12 @@ input::-ms-input-placeholder {
         grid-column: 7 / 13 ;
     }
 
+    /* ------- button sizing------ */
+
+    /* .w-40 {
+        width: 40%;
+    } */
+
     /* -------------about section ------------------ */
 
     .itemization > div > ul > li:not(:last-child) {
@@ -518,4 +529,64 @@ input::-ms-input-placeholder {
     .contact-text > div > ul > li {
         margin-bottom: 60px;
     }
+}
+
+@media screen and (min-width: 1772px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* ------------------------------------------------ANIMATIONS------------------------------------------------------------------ */
+
+/* NOTE: Some animations in here are from animation.css (see readme). This is so I can change the timing easily and have better control, as well as understand what the animate.css is actually doing for certain animations. */
+/* also I can save a hell of a lot of time by not having to put a class on every single div lmao */
+
+/* ~~~~~~~ANIMATE.CSS FADEINLEFT~~~~~~~~ */
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+.main-content > * {
+    animation: fadeInLeft 1.2s ease-out forwards;
+}
+
+/* I should really learn java script soI don't have to deal with this mess */
+
+.main-content > *:nth-child(1) {
+    animation-delay: -.6s;
+    z-index: 5;
+}
+
+.main-content > *:nth-child(2) {
+    animation-delay: -.5s;
+    z-index: 4;
+}
+
+.main-content > *:nth-child(3) {
+    animation-delay: -.4s;
+    z-index: 3;
+}
+
+.main-content > *:nth-child(4) {
+    animation-delay: -.3s;
+    z-index: 2;
+}
+
+.main-content > *:nth-child(5) {
+    animation-delay: -.2s;
+    z-index: 1;
+}
+
+.main-content > *:nth-child(6) {
+    animation-delay: -.1s;
+    z-index: 0;
 }
