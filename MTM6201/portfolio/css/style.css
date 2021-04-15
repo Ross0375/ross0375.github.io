@@ -199,8 +199,16 @@ div > ul > li > * {
 
 .works {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     padding-bottom: 50px;
+}
+
+.works-page {
+    grid-auto-rows: max-content;
+}
+
+.work > .body-text {
+    height:max-content;
+    padding-bottom: 2em;
 }
 
 .works > a > p {
@@ -217,18 +225,24 @@ div > ul > li > * {
 }
 
 .im {
-   font-size: 1em;
+   font-size: .8em;
 }
 
 .return {
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-items: center;
     margin: 2em 0px;
     position: sticky;
     top: 10px;
-    /* safari support */
-    position: -webkit-sticky;
+    z-index: 10;
+}
+
+.return > * {
+    background-color: white;
+    padding: .5em;
+    border: 2px var(--faded-black) solid;
 }
 
 /* --------------contact----------------------------------- */
@@ -286,6 +300,19 @@ textarea {
 
 .contact-text > div > ul > li {
     margin-bottom: 30px;
+}
+
+.thanks-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - calc( var(--nav-height) * 5 ) - 8px);
+    margin-bottom: 0px;
+}
+
+.thanks {
+    grid-column: 1/-1;
+    text-align: center;
 }
 
 
@@ -375,6 +402,10 @@ input::-ms-input-placeholder {
         grid-column: 4 / 9 ;
     }
 
+    .main-content.works {
+        height: auto;
+    }
+
     /* ------------about section------------------- */
 
     
@@ -389,10 +420,6 @@ input::-ms-input-placeholder {
         grid-column-start: span 4;
         margin-top: 1em;
         font-size: 30px;
-    }
-
-    .works .main-content {
-        height: 100%;
     }
 
     .works > .body-text {
@@ -491,9 +518,9 @@ input::-ms-input-placeholder {
 
     /* ------- button sizing------ */
 
-    /* .w-40 {
+    .w-40 {
         width: 40%;
-    } */
+    }
 
     /* -------------about section ------------------ */
 
@@ -559,7 +586,7 @@ input::-ms-input-placeholder {
     animation: fadeInLeft 1.2s ease-out forwards;
 }
 
-/* I should really learn java script soI don't have to deal with this mess */
+/* I should really learn java script so I don't have to deal with this mess */
 
 .main-content > *:nth-child(1) {
     animation-delay: -.6s;
@@ -589,4 +616,27 @@ input::-ms-input-placeholder {
 .main-content > *:nth-child(6) {
     animation-delay: -.1s;
     z-index: 0;
+}
+
+/* -------------------button animations---------------------- */
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: .2s;
+}
+
+#nav > li:not(:first-child):hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: .2s;
+}
+
+#nav > li.current-page:hover {
+    background-color: var(--primary);
+} 
+
+/* --------------------works hover------------------------ */
+
+.works > a:hover > img {
+    transform: scale(1.02);
+    transition-duration: .2s;
 }
