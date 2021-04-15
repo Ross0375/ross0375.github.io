@@ -202,13 +202,9 @@ div > ul > li > * {
     padding-bottom: 50px;
 }
 
-.works-page {
-    grid-auto-rows: max-content;
-}
-
-.work > .body-text {
+.works > .body-text {
     height:max-content;
-    padding-bottom: 2em;
+    padding: 100px 0;
 }
 
 .works > a > p {
@@ -620,13 +616,10 @@ input::-ms-input-placeholder {
 
 /* -------------------button animations---------------------- */
 
-.button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    transition-duration: .2s;
-}
-
+.button:hover,
+.return > a:hover,
 #nav > li:not(:first-child):hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(236, 236, 236);
     transition-duration: .2s;
 }
 
