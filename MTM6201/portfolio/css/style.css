@@ -259,7 +259,7 @@ div > ul > li > * {
     padding-bottom: 3rem;
 }
 
-.contact-links > i {
+.contact-links > a > i {
     font-size: 30px;
 }
 
