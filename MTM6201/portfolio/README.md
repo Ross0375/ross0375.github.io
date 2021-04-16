@@ -14,6 +14,9 @@ After finishing the body copy I started work on the animation and found a way si
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Challenges~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This project was certainly less ambitious then my midterm, mainly due to the fact that those looking at my portfolio probably don't want to see as crazty of a design. The main struggles I faced with this project was mostly super minor things like text acting weird and spacing issues. These issues only caused probably an hour or two of delay (way lessthen the midterm where I had multiple cases of mystery gaps and fitting images over eachother) One thing I learned a lot about was taking the border pixels into account in order to get the page to fit exactly onto the screen, without any scrolls or gaps. I also learned to not use animate css and instead automate the application of the animations. Without this I would have to go to every single page and add a lot of classes to every single section on the page, making it stupidly redundent. I really enjoyed the calmer, less rage inducing, work on this assignment.
 
+FINAL NOTE WHILE VALIDATING
+Can you please help in the marking explain or show why the calc function with a variable in it shows up as a parse error, it is literally driving me crazy and lost me marks on the last assignment and will lose me marks on this assignment. I have looked through multiple pages on google and have not found any resource explaining why it shows an error other than "Oh jujst ignore W3C markup is stupid anyways". It would be greatly appreciated and help me become more proficient. Thanks for the great semester!
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~RESOURCES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - animate.style for some simple animations (found and credited in my CSS file)
@@ -33,3 +36,4 @@ This project was certainly less ambitious then my midterm, mainly due to the fac
 4. Body Copy [DONE]
 5. Images [DONE]
 6. ALT text [DONE]
+7. Validation [CONE]

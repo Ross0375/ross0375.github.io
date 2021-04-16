@@ -52,6 +52,7 @@ table {
 
 /* ------------------------------------------- CUSTOM STYLES---------------------------------------------------- */
 
+/* defining variables for future use */
 :root {
     --primary: #E54B4B;
     --faded-black: #222222;
@@ -114,7 +115,7 @@ p {
 
 /* -----------------------------------nav------------------------------------ */
 
-
+/* removing nav container for the border */
 #nav.container {
     padding: 0px;
     margin-bottom: 1em;
@@ -126,15 +127,19 @@ p {
     border-bottom: var(--faded-black) 2px solid;
 }
 
+/* alignment */
 #nav > * {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* PARSE ERROR BUT I CANT FIX AND NO RESOURCES HELP ON THE INTERNET PLEASE ADVISE */
     height: calc(var(--nav-height) - 6px);
 }
 
+/* logo height calculations */
 #logo {
-    height: calc(var(--nav-height) - 25%);
+    /* PARSE ERROR, I am ripping my hair out over these, it only happens when variable are involved... */
+    height: calc(var(--nav-height) - calc(var(--nav-height) / 4)); 
 }
 
 .current-page {
@@ -207,6 +212,7 @@ div > ul > li > * {
     padding: 100px 0;
 }
 
+/* spacing and alignment */
 .works > a > p {
     text-align: center;
     padding-bottom: .8em;
@@ -224,6 +230,7 @@ div > ul > li > * {
    font-size: .8em;
 }
 
+/* sticky return button on the works page */
 .return {
     text-decoration: none;
     display: flex;
@@ -262,9 +269,10 @@ div > ul > li > * {
     padding-bottom: 3rem;
 }
 
+/* Inputs modification */
 textarea,
 input {
-    width: calc(100%-1em);
+    width: calc(100% - 1em);
     resize: none;
     outline: none;
     overflow: auto;
@@ -302,7 +310,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - calc( var(--nav-height) * 5 ) - 8px);
+    /* height: calc(100vh - 8px - var(--nav-height) * 5); PARSE ERROR ONCE AGAIN, ONLY HAPPENS WITH VARIABLES*/
+    height: calc(100vh - 8px - 60px * 5);
     margin-bottom: 0px;
 }
 
@@ -386,7 +395,8 @@ input::-ms-input-placeholder {
         grid-template-columns: repeat(8, 1fr);
         grid-column-gap: 16px;
         align-items: center;
-        height: calc(100vh - var(--nav-height));
+        /* height: calc(100vh - var(--nav-height)); PARSE ERROR I CANT FIGURE OUT WHY PLEASE HELP*/
+        height: calc(100vh - 100px);
         margin: 0;
     }
 
@@ -411,7 +421,7 @@ input::-ms-input-placeholder {
 
     /* ----------------------works pages-------------------------- */
 
-    
+    /* alignment */
     .works > * {
         grid-column-start: span 4;
         margin-top: 1em;
