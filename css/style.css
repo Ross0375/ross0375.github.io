@@ -1,0 +1,645 @@
+/* ----------------------------- css reset------------------------------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------------------------------------------- CUSTOM STYLES---------------------------------------------------- */
+
+/* defining variables for future use */
+:root {
+    --primary: #E54B4B;
+    --faded-black: #222222;
+    --nav-height: 60px;
+    --padding-sm: 0px 35px;
+    --padding-md: 0px 100px;
+    --padding-lg: 0px 140px;
+}
+
+.container {
+    padding: var(--padding-sm);
+    margin: 0 auto;
+}
+
+/* ------------------------------text styling--------------------------- */
+
+h1,
+h2,
+p,
+a {
+    color: var(--faded-black);
+    line-height: 30px;
+}
+
+h2,
+p,
+a {
+    font-family: 'roboto', sans-serif;
+}
+
+h2,
+a {
+    font-style:italic;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    padding: .3em 0px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 20px;
+    padding: .2em 0px;
+}
+
+p,
+a {
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+
+
+/* -----------------------------------nav------------------------------------ */
+
+/* removing nav container for the border */
+#nav.container {
+    padding: 0px;
+    margin-bottom: 1em;
+}
+
+#nav {
+    display: grid;
+    grid-template-rows: repeat(5 , 1fr);
+    border-bottom: var(--faded-black) 2px solid;
+}
+
+/* alignment */
+#nav > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* PARSE ERROR BUT I CANT FIX AND NO RESOURCES HELP ON THE INTERNET PLEASE ADVISE */
+    height: calc(var(--nav-height) - 6px);
+}
+
+/* logo height calculations */
+#logo {
+    /* PARSE ERROR, I am ripping my hair out over these, it only happens when variable are involved... */
+    height: calc(var(--nav-height) - calc(var(--nav-height) / 4)); 
+}
+
+.current-page {
+    background-color: var(--primary);
+    border:2px var(--faded-black) solid;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.current-page a {
+    color: white;
+}
+
+
+/* ----------------------------button------------------------------------ */
+
+.button {
+    text-align: center;
+    width: 100% ;
+    border: 2px var(--faded-black) solid;
+    padding: calc(50px / 2 - 4px) 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+    background-color: white;
+}
+
+/* ---------------------------body general----------------------------------- */
+
+img {
+    width: 100%;
+}
+
+.main-content {
+    margin-bottom: 100px;
+}
+
+/* about me list */
+
+.itemization {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div > ul > li > * {
+    text-align: center;
+}
+
+.item-col > ul {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.item-col > ul > li:last-child {
+    margin-top: auto;
+}
+
+/* --------------------works main page------------------------ */
+
+.works {
+    display: grid;
+    padding-bottom: 50px;
+}
+
+.works > .body-text {
+    height:max-content;
+    padding: 100px 0;
+}
+
+/* spacing and alignment */
+.works > a > p {
+    text-align: center;
+    padding-bottom: .8em;
+}
+
+.works > img {
+    padding-bottom: 2em;
+}
+
+.works:last-child {
+    padding-bottom: 0em;
+}
+
+.im {
+   font-size: .8em;
+}
+
+/* sticky return button on the works page */
+.return {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 2em 0px;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+
+.return > * {
+    background-color: white;
+    padding: .5em;
+    border: 2px var(--faded-black) solid;
+}
+
+/* --------------contact----------------------------------- */
+
+.contact > * {
+    text-align: center;
+}
+
+.contact > div > ul > li,
+.contact > h1 {
+    padding-bottom: 3rem;
+}
+
+.contact-links > a > i {
+    font-size: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+/* Inputs modification */
+textarea,
+input {
+    width: calc(100% - 1em);
+    resize: none;
+    outline: none;
+    overflow: auto;
+    font-family: 'Work Sans', sans-serif ;
+    font-size: 16px;
+    color: var(--faded-black);
+    border: 1px var(--faded-black) solid;
+    padding: .5em;
+}
+
+textarea {
+    height: 200px;
+    margin:0;
+}
+
+.inputs {
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+}
+
+.inputs > *:not(:last-child) {
+    margin-bottom: .5em;
+}
+
+.inputs > button {
+    margin-top: 0;
+}
+
+.contact-text > div > ul > li {
+    margin-bottom: 30px;
+}
+
+.thanks-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: calc(100vh - 8px - var(--nav-height) * 5); PARSE ERROR ONCE AGAIN, ONLY HAPPENS WITH VARIABLES*/
+    height: calc(100vh - 8px - 60px * 5);
+    margin-bottom: 0px;
+}
+
+.thanks {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+
+
+/* once again using a fix to make it viable on other browsers */
+textarea::placeholder,
+input::placeholder {
+    color: var(--faded-black);
+    opacity: 1;
+}
+  
+textarea:-ms-input-placeholde,
+input:-ms-input-placeholder {
+    color: var(--faded-black);
+}
+  
+textarea::-ms-input-placeholder,
+input::-ms-input-placeholder {
+    color: var(--faded-black);
+}
+
+/* --------------------------- MEDIUM SIZE BROWSERS ------------------------------ */
+
+@media screen and (min-width: 800px) {
+
+    :root {
+        --nav-height: 100px;
+    }
+
+    .container {
+        padding: var(--padding-md);
+    }
+
+    /* resizing fonts */
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    a {
+        font-size: 20px;
+    }
+
+    /* ------------------------nav bar--------------------------------- */
+
+    #nav.container {
+        padding: var(--padding-md);
+        margin: 0;
+    }
+
+    #nav {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 16px;
+    }
+
+    #nav > li:nth-child(2) {
+        grid-column: 5 / 6 ;
+    }
+
+    .current-page {
+        border:2px var(--faded-black) solid;
+        border-bottom: 0px;
+        border-top: 0px;
+    }
+
+    /* --------------------------- BODY ----------------------------------- */
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 16px;
+        align-items: center;
+        /* height: calc(100vh - var(--nav-height)); PARSE ERROR I CANT FIGURE OUT WHY PLEASE HELP*/
+        height: calc(100vh - 100px);
+        margin: 0;
+    }
+
+    .main-content > .portrait {
+        grid-column: 1 / 4;
+    }
+
+    .landing-text {
+        grid-column: 4 / 9 ;
+    }
+
+    .main-content.works {
+        height: auto;
+    }
+
+    /* ------------about section------------------- */
+
+    
+    #about {
+        display: block
+    }
+
+    /* ----------------------works pages-------------------------- */
+
+    /* alignment */
+    .works > * {
+        grid-column-start: span 4;
+        margin-top: 1em;
+        font-size: 30px;
+    }
+
+    .works > .body-text {
+        display: block;
+    }
+
+    /* -----------------contact page---------------------- */
+
+    .contact-text {
+        grid-column-start: span 3;
+    }
+
+    .contact-form {
+        grid-column-start: span 5;
+    }
+
+    .contact-text > div > ul > li {
+        margin-bottom: 35px;
+    }
+}
+
+
+@media screen and (min-width: 998px) {
+
+    /* h1 size */
+    h1 {
+        font-size: 40px;
+    }
+
+    /* -------------about section ------------------ */
+    #about {
+        display:grid;
+    }
+
+    .itemization > div > ul > li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    #about > .body-text {
+        grid-column: 1 / 5;
+    }
+
+    .itemization {
+        grid-column: 5 / 9;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+
+    /* font sizes */
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    /* margins */
+
+    .container {
+        padding: var(--padding-lg);
+    }
+
+    /* ---------------------------nav------------------------- */
+
+    #nav.container {
+        padding: var(--padding-lg);
+    }
+
+    #nav {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #nav > li:nth-child(2) {
+        grid-column: 7 / 8 ;
+    }
+
+    /* ---------------------------body--------------------------- */
+
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .main-content > .portrait {
+        grid-column: 1 / 6;
+     }
+    
+    .landing-text {
+        grid-column: 7 / 13 ;
+    }
+
+    /* ------- button sizing------ */
+
+    .w-40 {
+        width: 40%;
+    }
+
+    /* -------------about section ------------------ */
+
+    .itemization > div > ul > li:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    #about > .body-text {
+        grid-column: 1 / 7;
+    }
+
+    .itemization {
+        grid-column: 7 / 13;
+    }
+
+    /* ----------------------works pages-------------------------- */
+
+    
+    .works > * {
+        grid-column-start: span 6;
+    }
+
+    /* -----------------contact page---------------------- */
+
+    .contact-text {
+        grid-column: 2 / 5;
+    }
+
+    .contact-form {
+        grid-column: 6 / 13;
+    }
+
+    .contact-text > div > ul > li {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 1772px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* ------------------------------------------------ANIMATIONS------------------------------------------------------------------ */
+
+/* NOTE: Some animations in here are from animation.css (see readme). This is so I can change the timing easily and have better control, as well as understand what the animate.css is actually doing for certain animations. */
+/* also I can save a hell of a lot of time by not having to put a class on every single div lmao */
+
+/* ~~~~~~~ANIMATE.CSS FADEINLEFT~~~~~~~~ */
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+.main-content > * {
+    animation: fadeInLeft 1.2s ease-out forwards;
+}
+
+/* I should really learn java script so I don't have to deal with this mess */
+
+.main-content > *:nth-child(1) {
+    animation-delay: -.6s;
+    z-index: 5;
+}
+
+.main-content > *:nth-child(2) {
+    animation-delay: -.5s;
+    z-index: 4;
+}
+
+.main-content > *:nth-child(3) {
+    animation-delay: -.4s;
+    z-index: 3;
+}
+
+.main-content > *:nth-child(4) {
+    animation-delay: -.3s;
+    z-index: 2;
+}
+
+.main-content > *:nth-child(5) {
+    animation-delay: -.2s;
+    z-index: 1;
+}
+
+.main-content > *:nth-child(6) {
+    animation-delay: -.1s;
+    z-index: 0;
+}
+
+/* -------------------button animations---------------------- */
+
+.button:hover,
+.return > a:hover,
+#nav > li:not(:first-child):hover {
+    background-color: rgb(236, 236, 236);
+    transition-duration: .2s;
+}
+
+#nav > li.current-page:hover {
+    background-color: var(--primary);
+} 
+
+/* --------------------works hover------------------------ */
+
+.works > a:hover > img {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
