@@ -39,7 +39,10 @@
     border-radius: 50%;
 }
 
-
+/* --------New clients background--------------- */
+#new-clients {
+    background-image: url(https://picsum.photos/1920/1080);
+}
 
 /*------ Divider ------*/
 
