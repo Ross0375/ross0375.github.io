@@ -1,0 +1,41 @@
+.post {
+    box-sizing: border-box;
+    margin: 1em;
+    border-radius: 25px;
+    border: 2px solid #222;
+}
+
+.boxText{
+    padding: .5em;
+}
+
+img {
+    object-fit: cover;
+}
+
+.boxImg {
+    border-radius: 23px 0 0 23px;
+}
+
+/* Container */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
