@@ -1,21 +1,5 @@
-.post {
-    box-sizing: border-box;
-    margin: 1em;
-    border-radius: 25px;
-    border: 2px solid #222;
-}
 
-.boxText{
-    padding: .5em;
-}
 
-img {
-    object-fit: cover;
-}
-
-.boxImg {
-    border-radius: 23px 0 0 23px;
-}
 
 /* Container */
 .container {
