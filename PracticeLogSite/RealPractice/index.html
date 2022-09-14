@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Practice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="realBook.js"></script>
+</head>
+<body>
+  <main id="app" class="container">
+    <h1 class="my-3">Real Practice</h1>
+    <div class="card mb-3">
+      <div class="card-header">
+        <h3>Todays Song:</h3>
+      </div>
+      <div class="card-body">
+        <strong>{{this.dailySong.todaysSong.Title}}</strong> {{this.dailySong.todaysSong.AlternateTitle}} Page {{this.dailySong.todaysSong.PageNumber}}, Key of {{this.dailySong.todaysSong.Key}}, Composed by {{this.dailySong.todaysSong.Composer}}
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <select class="input-group-text" v-model="selection">
+        <option v-for="searchProp in searchType">{{ searchProp }}</option>
+      </select>
+      <input type="text" class="form-control" v-model="input" placeholder="Search..." />
+      <select class="input-group-text" v-model="keyFilter">
+        <option value="None">None</option>
+        <option v-for="key in keys">{{ key }}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" @click="addRandom">Add Random Song</button>
+      <button class="btn btn-danger mx-3" @click="clearSongs">Clear Songs</button>
+    </div>
+    <div class="row container-fluid gx-5 justify-content-end">
+      <div class="col-sm-12 col-md-6 listHeight  container-fluid overflow-auto">
+        <ul class="list-group" >
+          <li class="list-group-item d-flex justify-content-center align-items-center" v-for="(song, index) in filteredSongs" :key="song.PageNumber" :class="{ disabled: song.Selected }">
+            <p class="col"><strong>{{song.Title}}</strong> {{song.AlternateTitle}} Page {{song.PageNumber}} {{song.Key}} {{song.Composer}}</p>
+            <span class="btn btn-primary" :class="{ disabled: song.Selected }" @click="addSong(song.PageNumber, index)">+</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6 listHeight container-fluid overflow-auto">
+        <ul class="list-group" >
+          <li class="list-group-item d-flex justify-content-center align-items-center" v-for="(song, index) in selectedSongs">
+            <p class="col"><strong>{{song.Title}}</strong> {{song.AlternateTitle}} Page {{song.PageNumber}} {{song.Key}} {{song.Composer}}</p>
+            <span class="btn btn-danger" @click="delSong(song.PageNumber, index)">x</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script src="app.js"></script>
